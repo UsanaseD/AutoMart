@@ -1,0 +1,223 @@
+ 
+ *{
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: url("../images/dd.jpg");
+    background-size: cover;
+    font-family: Arial;
+    padding: 0px;
+    color: #f2f2f2;
+  }
+  
+  /* Header/Blog Title */
+  .header {
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .header h1 {
+    font-size: 50px;
+  }
+  
+  /* Style the top navigation bar */
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    height: 70px;
+  }
+  form.search{
+    margin-top: 15px;
+    display: inline-flex;
+    font-size: 20px;
+    margin-left: 20%;
+  }
+  form.search input[type=text] {
+    width: 400px;
+    font-size: inherit;
+    border:0.2em solid #ddd;
+    border-radius: 0.5em 0 0 0.5em;
+    padding: 0.2em 0.5em;
+  }
+  form.search button{
+    font-size: inherit;
+    border:0.2em solid #ddd ;
+    border-radius: 0 0.5em 0.5em 0;
+    border-left: 0;
+    padding: 0 0.75em;
+    outline: 0;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    height: 32px;
+  }
+  /* Style the top navigation bar */
+  .nav {
+    overflow: hidden;
+    background-color: rgb(52, 105, 202);
+    height: 30px;
+  }
+  /* Style the topnav links */
+  .nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    color:  #000000;
+  }
+  
+  .nav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .centralcolumn {   
+    float:left;
+    width: 75%;
+    height: 60%;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: right;
+    width: 25%;
+    padding-left: 20px;
+    
+  
+  }
+  
+  
+  /* Input form*/
+  input[type="text"],
+  input[type="password"]
+  {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 4px;
+  width: 220px;
+  height: 32px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: 0.2s ease;
+  }
+  
+  
+  /* submiting form form*/
+  input[type="submit"]
+  {
+  margin-bottom: 28px;
+  background: #FF8C00;
+  width: 120px;
+  height: 32px;
+  border: none;
+  border-radius: 2px;
+  transition: 0.2s ease;
+  cursor: pointer;
+  }
+  
+  
+  /* submiting form hover*/
+  input[type="submit"]:hover
+  {
+  background: #333;
+  transition: 0.2s ease;
+  }
+  
+  
+  
+  /* Fake image */
+  .fakeimg1 {
+    background:#32508e;
+    background-size: cover;
+    padding: 20px;
+    color: #ddd;
+    
+  }
+  
+  .fakeimg{
+   margin-top: 3px;
+   margin-left: 5%;
+   background:#32508e;
+   background-size: cover;
+   padding: 20px;
+   color: #ddd;
+   font-size: 20px;
+  }
+  .styled-select select {
+    border: 2;
+    color: rgb(17, 16, 16);
+    background: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 2px 10px;
+    width: 170px;
+ }
+  
+  /* Add a card effect for articles */
+  .card {
+    background-repeat: no-repeat;
+    background-color: #333;
+    background-size: cover;
+    padding: 20px;
+    margin-top: 20px;
+    color: #f2f2f2;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer1 {
+    padding: 20px;
+    text-align: center;
+    background: #333;
+    margin-top: 20px;
+    color: #f2f2f2;
+  }
+  
+  
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .topnav a {
+      float: none;
+      width: 100%;
+    }
+  }
+  
