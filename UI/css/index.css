@@ -9,6 +9,7 @@
     font-family: Arial;
     padding: 0px;
     color: #f2f2f2;
+    background-repeat: no-repeat;
   }
   
   /* Header/Blog Title */
@@ -129,6 +130,7 @@
   }
   
   
+<<<<<<< HEAD
   
   
   /* Fake image */
@@ -139,6 +141,8 @@
     color: #ddd;
     
   }
+=======
+>>>>>>> d37baa819a83131198126e2a050319db2e5eef59
   
   .fakeimg{
    margin-top: 3px;
@@ -187,19 +191,18 @@
   
   
   
-  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn {   
-      width: 100%;
-      padding: 0;
-    }
+ /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
   }
-  
-  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-  @media screen and (max-width: 400px) {
-    .topnav a {
-      float: none;
-      width: 100%;
-    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
   }
-  
+}
