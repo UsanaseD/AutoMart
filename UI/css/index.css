@@ -96,6 +96,29 @@
     width: 75%;
     height: 60%;
   }
+  table{
+    width: 600px;
+    margin-left: 45px;
+  }
+  table tH{
+    background: #0c0c0c;
+    color: #ddd;
+  }
+  table td{
+    border: none;
+    border-right: 1px solid #32508e;
+  }
+  #order{
+    width: 60px;
+    background: #32508e;
+    height: 40px;
+    border: none;
+    color: #ddd;
+  }
+  #order:hover{
+    background: grey;
+
+  }
   
   /* Right column */
   .rightcolumn {
@@ -107,6 +130,19 @@
   }
   
   
+<<<<<<< HEAD
+  
+  
+  /* Fake image */
+  .fakeimg1 {
+    background:#32508e;
+    background-size: cover;
+    padding: 20px;
+    color: #ddd;
+    
+  }
+=======
+>>>>>>> d37baa819a83131198126e2a050319db2e5eef59
   
   .fakeimg{
    margin-top: 3px;
