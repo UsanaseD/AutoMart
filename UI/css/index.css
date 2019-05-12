@@ -101,8 +101,7 @@
     margin-left: 45px;
   }
   table tr:hover{
-    background: gray;
-    
+    background: grey;
   }
   table tH{
     background: #0c0c0c;
@@ -121,7 +120,7 @@
     color: #ddd;
   }
   #order:hover{
-    background: grey;
+    background: chocolate;
 
   }
   
