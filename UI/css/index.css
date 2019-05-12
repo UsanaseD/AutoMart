@@ -107,6 +107,7 @@
   table td{
     border: none;
     border-right: 1px solid #32508e;
+    border-bottom: 1px solid #32508e;
   }
   #order{
     width: 60px;
