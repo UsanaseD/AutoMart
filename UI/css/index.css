@@ -9,6 +9,7 @@
     font-family: Arial;
     padding: 0px;
     color: #f2f2f2;
+    background-repeat: no-repeat;
   }
   
   /* Header/Blog Title */
@@ -49,7 +50,7 @@
     outline: 0;
     cursor: pointer;
     background-color: rgb(255, 255, 255);
-    height: 32px;
+    height: 39px;
   }
   /* Style the top navigation bar */
   .nav {
@@ -106,57 +107,6 @@
   }
   
   
-  /* Input form*/
-  input[type="text"],
-  input[type="password"]
-  {
-  display: block;
-  box-sizing: border-box;
-  margin-bottom: 20px;
-  padding: 4px;
-  width: 220px;
-  height: 32px;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  transition: 0.2s ease;
-  }
-  
-  
-  /* submiting form form*/
-  input[type="submit"]
-  {
-  margin-bottom: 28px;
-  background: #FF8C00;
-  width: 120px;
-  height: 32px;
-  border: none;
-  border-radius: 2px;
-  transition: 0.2s ease;
-  cursor: pointer;
-  }
-  
-  
-  /* submiting form hover*/
-  input[type="submit"]:hover
-  {
-  background: #333;
-  transition: 0.2s ease;
-  }
-  
-  
-  
-  /* Fake image */
-  .fakeimg1 {
-    background:#32508e;
-    background-size: cover;
-    padding: 20px;
-    color: #ddd;
-    
-  }
   
   .fakeimg{
    margin-top: 3px;
@@ -205,19 +155,18 @@
   
   
   
-  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn {   
-      width: 100%;
-      padding: 0;
-    }
+ /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
   }
-  
-  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-  @media screen and (max-width: 400px) {
-    .topnav a {
-      float: none;
-      width: 100%;
-    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
   }
-  
+}
