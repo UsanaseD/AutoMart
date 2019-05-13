@@ -1,0 +1,108 @@
+body{
+    background-image: url("../images/dd.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: #777;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+    }
+    
+    #signup-box{
+    position: relative;
+    margin: 5% auto;
+    height: 450px;
+    width: 600px;
+    box-shadow: 0 2px 4p rgba(0, 0, 0, 0.6);
+    background: #fff;
+
+    }
+    
+    .right-box
+    {
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 300px;
+    }
+    form{
+        height: 600px;
+    }
+    
+    h1
+    {
+    margin: 0 0 20px 0;
+    font-weight: 300;
+    font-size: 28px;
+    }
+    .left-box
+    {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    height: 450px;
+    width: 330px;
+    padding: 40px;
+    background-image: url("../images/wpp.jpg");
+    background-size: cover;
+    background-position: center;
+    }    
+
+    .left-box .bg
+    {
+    display: block;
+    margin-bottom: 40px;
+    text-underline-position: below;
+    font-size: 23px;
+    color: #fff;
+    text-align: center;
+    }
+    input[type="text"],
+    input[type="password"]
+    {
+        display: block;
+        height: 32px;
+        width: 220px;
+        border: none;
+        outline: none;
+        box-sizing: border-box;
+        padding: 4px;
+        border-bottom: 1px solid black;
+        transition: 0.2 ease;
+    }
+    button[type="submit"]
+    {
+        margin-bottom: 5px;
+        width: 120px;
+        height: 32px;
+        border: none;
+        border-radius: 3px;
+        background:#32508e;
+        color: beige;
+        transition: 0.2s ease;
+        cursor: pointer;
+    }
+
+    button[type="submit"] a
+    {
+        color:#fff;
+        font-size: 14px;
+        text-decoration: none;
+
+    }
+    button[type="submit"]:hover
+    {
+        background: #777;
+    }
+
+
+    input[type="submit"]:hover
+    {
+        background: #777;
+        transition: 0.2s ease;
+    }
