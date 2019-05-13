@@ -1,7 +1,7 @@
 body{
     background-image: url("../images/dd.jpg");
     background-size: cover;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
     font-size: 16px;
