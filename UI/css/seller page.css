@@ -132,6 +132,19 @@
     
   
   }
+  .rightcolumn a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    margin-top: 1px;
+  }
+  .rightcolumn a:hover{
+      
+    color: black;
+    font-size: 20px;
+  }
   
   
   
