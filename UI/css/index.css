@@ -145,7 +145,7 @@
   }
   .fakeimg1{
     margin-top: 3px;
-    margin-left: 5%;
+    margin-left: 1%;
     background:url("../images/images.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -153,6 +153,7 @@
     padding: 20px;
     color: #ddd;
     font-size: 20px;
+    width: 280px;
    }
 
 
@@ -174,6 +175,11 @@
     padding: 20px;
     margin-top: 20px;
     color: #f2f2f2;
+  }
+  .aboutus{
+    background: white;
+    color: #000000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
   button.social{
     margin-top: 20px;
