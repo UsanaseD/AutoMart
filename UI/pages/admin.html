@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> ADMIN ROOM</title>
+<link rel="stylesheet" type="text/css" href="../css/admin.css">
+<script type="text/javascript" src="../js/Admin-tab.js"></script>
+</head>
+
+
+<body>
+
+        <button class="tablink" onclick="openPage('Ads', this,'grey')">VIEW Ads</button>
+        <button class="tablink" onclick="openPage('Reported', this, 'grey')">Reported Cars</button>
+
+    <div id="Ads" class="tabcontent">
+  <div class="centralcolumn">
+    <div class="card">
+
+        <h1>List Of Added Cars</h1></br>
+       
+        <form class="search">
+                <input type="text" placeholder="Search by keyword..." name="search">
+                <button type="submit" name="submit">&#128269</button>
+              </form>
+
+      <p>
+      <table>
+        <tr >
+          <th>Photo</th>
+          <th>make</th>
+          <th>state</th>
+          <th>seller</th>
+          <th>location</th>
+          <th>steeling trans</th>
+          <th>availability</th>
+          <th>engine</th>
+          <th>mileage</th>
+          <th>price</th>
+        </tr>
+              <tr>
+
+                  <td><img src="../images/dd.jpg" alt="sorry"></td>
+                  <td>BENZ CLK</br>
+                  <td>Used</td>
+                  <td>Akagera Motors</td>
+                  <td>Kigali</td>
+                  <td>Left</td>
+                  <td>available</td>
+                  <td>3,450cc (2GR)</td>
+                  <td>102,683</td>
+                  <td>3M <button id="delete" type="submit">Delete Add</button></td>
+                </tr>
+
+                <tr>
+
+                        <td><img src="../images/dd.jpg" alt="sorry"></td>
+                        <td>BENZ CLK</br>
+                        <td>Used</td>
+                        <td>Akagera Motors</td>
+                        <td>Kigali</td>
+                        <td>Left</td>
+                        <td>available</td>
+                        <td>3,450cc (2GR)</td>
+                        <td>102,683</td>
+                        <td>3M <button id="delete" type="submit">Delete Add</button></td>
+                      </tr>
+
+                      <tr>
+
+                            <td><img src="../images/dd.jpg" alt="sorry"></td>
+                            <td>BENZ CLK</br>
+                            <td>Used</td>
+                            <td>Akagera Motors</td>
+                            <td>Kigali</td>
+                            <td>Left</td>
+                            <td>available</td>
+                            <td>3,450cc (2GR)</td>
+                            <td>102,683</td>
+                            <td>3M <button id="delete" type="submit">Delete Add</button></td>
+                          </tr>
+      </table>
+      </p>
+    </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<div id="Reported" class="tabcontent">
+        <div class="centralcolumn">
+          <div class="card">
+      
+              <h1>List Of Reported Cars</h1></br>
+             
+              <form class="search">
+                      <input type="text" placeholder="Search by keyword..." name="search">
+                      <button type="submit" name="submit">&#128269</button>
+                    </form>
+      
+            <p>
+            <table>
+              <tr >
+                <th>Photo</th>
+                <th>Car Id</th>
+                <th>Report Id</th>
+                <th>Reported issue</th>
+                <th>Issue Desc</th>
+
+              </tr>
+                    <tr>
+      
+                        <td><img src="../images/dd.jpg" alt="sorry"></td>
+                        <td>Bz1001</br>
+                        <td>s1001</br>
+                        <td>it's a stolen car</td>
+                        <td>it's details meet a stolen car last week in Nyamirambo</td>
+                        <td><button id="delete" type="submit">Delete Add</button></td>
+                      </tr>
+      
+                      <tr>
+      
+                              <td><img src="../images/dd.jpg" alt="sorry"></td>
+                              <td>Bz2001</br>
+                                <td>s2001</br>
+                              <td>it's still on a loan</td>
+                              <td>it's details meets a car on a loan in BK bank remera branch</td>
+                              <td><button id="delete" type="submit">Delete Add</button></td>
+                            </tr>
+            </table>
+            </p>
+          </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      
+      </div>
+      </div>
+
+</body>
+</html>

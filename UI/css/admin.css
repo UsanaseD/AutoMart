@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: white;
+    font-family: Arial;
+    padding: 0px;
+    color: #0c0b0b;
+  }
+  h1{
+      text-align: center;
+      color: grey;
+  }
+  form.search{
+    margin-top: 15px;
+    display: inline-flex;
+    font-size: 20px;
+    margin-left: 20%;
+  }
+  form.search input[type=text] {
+    width: 400px;
+    font-size: inherit;
+    border:0.2em solid #ddd;
+    border-radius: 0.5em 0 0 0.5em;
+    padding: 0.2em 0.5em;
+  }
+  form.search button{
+    font-size: inherit;
+    border:0.2em solid #ddd ;
+    border-radius: 0 0.5em 0.5em 0;
+    border-left: 0;
+    padding: 0 0.75em;
+    outline: 0;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    height: 39px;
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .centralcolumn {   
+    float:left;
+    width: 75%;
+    height: 60%;
+  }
+  table{
+    width: 600px;
+    margin-left: 45px;
+  }
+  table tr:hover{
+    background: grey;
+    color:white;
+  }
+  table tH{
+    background: grey;
+    color: #ddd;
+  }
+  table td{
+    border: none;
+    border-bottom: 1px solid #32508e;
+  }
+
+  #delete{
+    width: 60px;
+    background: rgb(74, 92, 128);
+    height: 40px;
+    border: none;
+    color: #ddd;
+  }
+  #delete:hover{
+    background: chocolate;
+
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    color: black;
+    border: none ;
+    
+  }
+
+
+
+/* Style tab links */
+.tablink {
+  background: rgb(74, 92, 128);
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: rgb(88, 107, 192);
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Ads {
+    background-color: white;
+}
+#Reported
+{
+    background-color: white;
+}
+
+  
+
+

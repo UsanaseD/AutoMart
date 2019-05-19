@@ -3,15 +3,13 @@
   }
   
   body {
-    background-image: url("../images/dd.jpg");
-    background-size: cover;
+    background: white;
     font-family: Arial;
     padding: 0px;
-    color: #f2f2f2;
-    background-repeat: no-repeat;
+    color: #0c0b0b;
   }
   
-  /* Header/Blog Title */
+  /* Header/Title */
   .header {
     padding: 5px;
     text-align: center;
@@ -24,7 +22,7 @@
   /* Style the top navigation bar */
   .topnav {
     overflow: hidden;
-    background-color: #333;
+    background-color: rgb(139, 138, 138);
     height: 70px;
   }
   form.search{
@@ -54,7 +52,7 @@
   /* Style the top navigation bar */
   .nav {
     overflow: hidden;
-    background-color: rgb(52, 105, 202);
+    background-color: rgb(74, 92, 128);
     height: 30px;
   }
   /* Style the topnav links */
@@ -65,7 +63,7 @@
     text-align: center;
     padding: 10px 12px;
     text-decoration: none;
-    color:  #000000;
+   
   }
   
   .nav a:hover {
@@ -101,9 +99,10 @@
   }
   table tr:hover{
     background: grey;
+    color:white;
   }
   table tH{
-    background: #0c0c0c;
+    background: grey;
     color: #ddd;
   }
   table td{
@@ -111,9 +110,15 @@
     border-right: 1px solid #32508e;
     border-bottom: 1px solid #32508e;
   }
+  td a{
+    text-decoration: none;
+  }
+  td a:hover{
+    color: #ff0000;
+  }
   #order{
     width: 60px;
-    background: #32508e;
+    background: rgb(74, 92, 128);
     height: 40px;
     border: none;
     color: #ddd;
@@ -128,20 +133,17 @@
     float: right;
     width: 25%;
     padding-left: 20px;
-    
-  
+
   }
-  
-  
-  
   .fakeimg{
    margin-top: 3px;
    margin-left: 5%;
-   background:#32508e;
-   background-size: cover;
+   background:rgb(74, 92, 128);
    padding: 20px;
    color: #ddd;
    font-size: 20px;
+   border:none;
+   border-radius: 15px;
   }
   .fakeimg1{
     margin-top: 3px;
@@ -151,30 +153,29 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 20px;
-    color: #ddd;
     font-size: 20px;
     width: 280px;
    }
 
 
   .styled-select select {
-    border: 2;
+    border: none;
+    border-radius: 30px;
     color: rgb(17, 16, 16);
     background: white;
     font-size: 18px;
-    font-weight: bold;
     padding: 2px 10px;
     width: 170px;
  }
   
   /* Add a card effect for articles */
   .card {
-    background-repeat: no-repeat;
-    background-color: #333;
-    background-size: cover;
+    background-color: white;
     padding: 20px;
     margin-top: 20px;
-    color: #f2f2f2;
+    color: black;
+    border: 1px solid ;
+    border-radius: 25px;
   }
   .aboutus{
     background: white;
@@ -225,7 +226,7 @@
   .footer1 {
     padding: 20px;
     text-align: center;
-    background: #333;
+    background: rgb(139, 138, 138);
     margin-top: 20px;
     color: #f2f2f2;
   }
@@ -233,17 +234,13 @@
   
   
  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
+ @media screen and (max-width: 800px) {
+  .centralcolumn, .rightcolumn,
+   .card, .fakeimg,form.search input[type=text], 
+  .form.search button, .topnav, .topnav a ,table,body {
     width: 100%;
     padding: 0;
-  }
-}
+    }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .topnav a {
-    float: none;
-    width: 100%;
-  }
-}
+    }
+
