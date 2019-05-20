@@ -145,6 +145,14 @@
    border:none;
    border-radius: 15px;
   }
+  button a{
+    text-decoration: none;
+    color: #ddd;
+  }
+  button a:hover{
+    text-decoration: none;
+    color: #ddd;
+  }
   .fakeimg1{
     margin-top: 3px;
     margin-left: 1%;
