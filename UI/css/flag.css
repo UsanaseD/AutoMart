@@ -8,13 +8,14 @@ body{
     font-weight: 300;
     }
     
-    #login-box{
+    #reporting-form{
     position: relative;
     margin: 5% auto;
     height: 400px;
     width: 600px;
     box-shadow: 0 2px 4p rgba(0, 0, 0, 0.6);
     background: #fff;
+    color: #777
     }
     
     .right-box
@@ -30,11 +31,11 @@ body{
     }
 
     
-    h1
+    h2
     {
-    margin: 0 0 20px 0;
+    margin: center;
     font-weight: 300;
-    font-size: 28px;
+    font-size: 25px;
     }
     .left-box
     {
@@ -60,19 +61,7 @@ body{
     color: #fff;
     text-align: center;
     }
-    input[type="text"],
-    input[type="password"]
-    {
-        display: block;
-        height: 50px;
-        width: 220px;
-        border: none;
-        outline: none;
-        box-sizing: border-box;
-        padding: 4px;
-        border-bottom: 1px solid black;
-        transition: 0.2 ease;
-    }
+
     button[type="submit"]
     {
         margin-bottom: 5px;
