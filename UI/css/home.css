@@ -1,5 +1,4 @@
- 
- *{
+*{
     box-sizing: border-box;
   }
   
@@ -10,7 +9,7 @@
     color: #0c0b0b;
   }
   
-  /* Header/Blog Title */
+  /* Header/Title */
   .header {
     padding: 5px;
     text-align: center;
@@ -64,13 +63,29 @@
     text-align: center;
     padding: 10px 12px;
     text-decoration: none;
+   
   }
   
   .nav a:hover {
     background-color: #ddd;
     color: black;
   }
-
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
   /* Create two unequal columns that floats next to each other */
   /* Left column */
   .centralcolumn {   
@@ -84,7 +99,7 @@
   }
   table tr:hover{
     background: grey;
-    color: #ddd;
+    color:white;
   }
   table tH{
     background: grey;
@@ -95,12 +110,12 @@
     border-right: 1px solid #32508e;
     border-bottom: 1px solid #32508e;
   }
-td a{
-  text-decoration: none;
-}
-td a:hover{
-  color: #ff0000;
-}
+  td a{
+    text-decoration: none;
+  }
+  td a:hover{
+    color: #ff0000;
+  }
   #order{
     width: 60px;
     background: rgb(74, 92, 128);
@@ -118,18 +133,9 @@ td a:hover{
     float: right;
     width: 25%;
     padding-left: 20px;
-    
-  
-  }
-  /* Right column */
-  .rightcolumn {
-    float: right;
-    width: 25%;
-    padding-left: 20px;
 
   }
-
-.fakeimg{
+  .fakeimg{
    margin-top: 3px;
    margin-left: 5%;
    background:rgb(74, 92, 128);
@@ -139,18 +145,6 @@ td a:hover{
    border:none;
    border-radius: 15px;
   }
-  .fakeimg a{
-    text-decoration: none;
-    border-bottom: 1px solid white;
-    font-size: 15px;
-    font-weight: bold;
-    color: white;
-  }
-  .fakeimg a:hover{
-    font-size: 20px;
-    
-  }
-
   button a{
     text-decoration: none;
     color: #ddd;
@@ -159,6 +153,17 @@ td a:hover{
     text-decoration: none;
     color: #ddd;
   }
+  .fakeimg1{
+    margin-top: 3px;
+    margin-left: 1%;
+    background:url("../images/images.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    font-size: 20px;
+    width: 280px;
+   }
 
 
   .styled-select select {
@@ -177,42 +182,47 @@ td a:hover{
     padding: 20px;
     margin-top: 20px;
     color: black;
-    border: 3px solid rgb(74, 92, 128) ;
+    border: 3px solid rgb(74, 92, 128);
     border-radius: 25px;
   }
-
-button.social{
-  margin-top: 20px;
-  width: 220px;
-  height: 36px;
-  border: none;
-  border-radius: 2px;
-  font-weight: 800;
-  transition: 0.2s ease;
-  cursor: pointer;
+  .aboutus{
+    background: white;
+    color: #000000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
-  button.social:hover{
-    height: 50px;
-    width: 250px;
+  button.social{
+    margin-top: 20px;
+    width: 220px;
+    height: 36px;
+    border: none;
+    border-radius: 2px;
+    font-weight: 800;
+    transition: 0.2s ease;
+    cursor: pointer;
+    }
+    button.social:hover{
+      height: 50px;
+      width: 250px;
+    }
+    .fcbk{
+      background: #32508e;
+    }
+    .twt{
+      background: #55acee;
+    }
+    .ytb
+    {
+      background: #a50808;
+    }
+    .sclk a
+    {
+    display: block;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    color: #ddd
   }
-  .fcbk{
-    background: #32508e;
-  }
-  .twt{
-    background: #55acee;
-  }
-  .ytb
-  {
-    background: #a50808;
-  }
-  .sclk a
-  {
-  display: block;
-  text-decoration: none;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  position: relative;
-  color: #ddd
-}
+  
   /* Clear floats after the columns */
   .row:after {
     content: "";
@@ -228,6 +238,7 @@ button.social{
     margin-top: 20px;
     color: #f2f2f2;
   }
+  
   
   
  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */

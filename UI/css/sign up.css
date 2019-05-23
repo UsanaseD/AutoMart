@@ -15,7 +15,7 @@ body{
     width: 600px;
     box-shadow: 0 2px 4p rgba(0, 0, 0, 0.6);
     background: #fff;
-    border: 1px solid black;
+    border: 3px solid rgb(74, 92, 128) ;
     }
     
     .right-box
