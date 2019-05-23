@@ -82,7 +82,6 @@
   }
   table{
     width: 600px;
-    margin-left: 45px;
   }
 
   table tH{
@@ -91,7 +90,6 @@
   }
   table td{
     border: none;
-
   }
   td a{
     text-decoration: none;
