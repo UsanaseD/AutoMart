@@ -56,20 +56,7 @@
     height: 30px;
   }
   /* Style the topnav links */
-  .nav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 10px 12px;
-    text-decoration: none;
-   
-  }
-  
-  .nav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
+
   
   .topnav a {
     float: left;
@@ -97,18 +84,14 @@
     width: 600px;
     margin-left: 45px;
   }
-  table tr:hover{
-    background: grey;
-    color:white;
-  }
+
   table tH{
     background: grey;
     color: #ddd;
   }
   table td{
     border: none;
-    border-right: 1px solid #32508e;
-    border-bottom: 1px solid #32508e;
+
   }
   td a{
     text-decoration: none;
@@ -182,9 +165,32 @@
     padding: 20px;
     margin-top: 20px;
     color: black;
-    border: 1px solid ;
+    border: 3px solid rgb(74, 92, 128) ;
     border-radius: 25px;
   }
+
+  .car-card{
+    background: white;
+    height:200px;
+    width: 300px;
+    margin-left:5px;
+   }
+   .mini-car-card{
+     border: none;
+     background: #ddd;
+     height: 20px;
+     width: 300px;
+     color: #000000;
+   }
+   .car-card img{
+       left:0;
+       height:150px;
+       width: 300px;
+   }
+   table td:hover{
+     box-shadow: 7px 7px grey;
+   }
+
   .aboutus{
     background: white;
     color: #000000;
