@@ -78,10 +78,7 @@
     width: 75%;
     height: 60%;
   }
-  table{
-    width: 600px;
-    margin-left: 45px;
-  }
+
   table tr:hover{
     background: grey;
     color: #ddd;
@@ -101,8 +98,10 @@ td a{
 td a:hover{
   color: #ff0000;
 }
+td img{
+  width:100%;
+}
   #order{
-    width: 60px;
     background: rgb(74, 92, 128);
     height: 40px;
     border: none;
@@ -131,7 +130,7 @@ td a:hover{
 
 .fakeimg{
    margin-top: 3px;
-   margin-left: 5%;
+
    background:rgb(74, 92, 128);
    padding: 20px;
    color: #ddd;
@@ -230,14 +229,19 @@ button.social{
   }
   
   
- /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
- @media screen and (max-width: 800px) {
-  .centralcolumn, .rightcolumn,
-   .card, .fakeimg,form.search input[type=text], 
-  .form.search button, .topnav, .topnav a ,table,body {
-    width: 100%;
-    padding: 0;
-    }
+  /* Responsive layout - when the screen is less than 1000px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 1000px) {
+    .centralcolumn, .rightcolumn,
+    .card, .fakeimg,
+   .form.search button, .topnav, .topnav a ,
+   table,body,.sclk,table tr,
+   .car-card,.fakeimg,.styled-select select
+   {
+      width: 100%;
+      padding: 0;
+      float:none;
+      }
 
-    }
 
+  
+      }
