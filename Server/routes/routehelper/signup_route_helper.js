@@ -1,6 +1,6 @@
+const joi = require('@hapi/joi');
+const { users } = require('./model/model');
 module.exports.signup = (req, res) => {
-  const joi = require('@hapi/joi');
-  const { users } = require('./model/model');
   const schema = joi.object().keys({
     email: joi.string().email({ minDomainSegments: 2 }),
     firstname: joi.string(),

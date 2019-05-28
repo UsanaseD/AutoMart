@@ -1,6 +1,6 @@
+const joi = require('@hapi/joi');
+const { users } = require('./model/model');
 module.exports.login = (req, res) => {
-    const joi = require('@hapi/joi');
-    const { users } = require('./model/model');
     const schema = joi.object().keys({
       id: joi.number().integer(),
       firstname: joi.string(),
