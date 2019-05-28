@@ -1,6 +1,6 @@
+const joi=require('@hapi/joi');
+const {orders}=require('./model/model');
 module.exports.order=(req,res)=>{
-    const joi=require('@hapi/joi');
-    const {orders}=require('./model/model');
     const schema=joi.object().keys({
         car_id:joi.number().integer(),
         status:joi.string(),
