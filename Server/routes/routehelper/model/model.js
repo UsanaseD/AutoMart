@@ -1,5 +1,4 @@
 const users = [];
-const cars = [];
 const orders = [
   {
     id: 1,
@@ -16,6 +15,26 @@ const orders = [
     status: 'rejected',
     old_price_offered: 2000000,
     new_price_offered: 2500000,  
+  },
+];
+const cars = [
+  {
+    id:1,
+    email:'todiddy20@gmail.com',
+    manufacturer:'toyota',
+    model:'corola',
+    price:'3000000',
+    state:'new',
+    status:'sold',
+  },
+  {
+    id:2,
+    email:'todiddy20@gmail.com',
+    manufacturer:'toyota',
+    model:'corola',
+    price:'3000000',
+    state:'new',
+    status:'available',
   },
 ];
 module.exports.users = users;

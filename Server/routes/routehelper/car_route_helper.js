@@ -1,6 +1,6 @@
+const joi=require('@hapi/joi');
+const{cars}=require('./model/model');
 module.exports.car=(req,res)=>{
-    const joi=require('@hapi/joi');
-    const{cars}=require('./model/model');
     const schema=joi.object().keys({
     email:joi.string().email({minDomainSegments: 2 }),
     manufacturer:joi.string(),

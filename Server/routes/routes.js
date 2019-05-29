@@ -5,6 +5,7 @@ const routerHelper_login = require('./routehelper/login_route_helper');
 const routehelper_car = require('./routehelper/car_route_helper');
 const order_route_helper=require('./routehelper/order_route_helper');
 const patch_order=require('./routehelper/patch_routes/order_patch_helper');
+const car_patch_route=require('./routehelper/patch_routes/car_patch_route');
 app.use(express.json());
 
 
@@ -13,7 +14,8 @@ app.post('/api/v1/auth/login', routerHelper_login.login);
 app.post('/api/v1/car', routehelper_car.car);
 app.post('/api/v1/order',order_route_helper.order);
 
-app.put('/api/v1/order/:id',patch_order.order);
+app.patch('/api/v1/order/:id',patch_order.order);
+app.patch('/api/v1/car/status/:id',car_patch_route.car);
 
 
 const port = process.env.PORT || 3000;
