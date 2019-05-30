@@ -1,4 +1,5 @@
 const users = [];
+const flags =[];
 const orders = [
   {
     id: 1,
@@ -40,4 +41,5 @@ const cars = [
 module.exports.users = users;
 module.exports.cars = cars;
 module.exports.orders = orders;
+module.exports.flags= flags;
 
