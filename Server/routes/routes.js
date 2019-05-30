@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express();
-const routerHelper_signup = require('./routehelper/signup_route_helper');
-const routerHelper_login = require('./routehelper/login_route_helper');
-const routehelper_car = require('./routehelper/car_route_helper');
-const order_route_helper=require('./routehelper/order_route_helper');
-const patch_order=require('./routehelper/patch_routes/order_patch_helper');
-const car_patch_route=require('./routehelper/patch_routes/car_patch_route');
-const car_price_route=require('./routehelper/patch_routes/car-price-patch');
+const routerHelper_signup = require('./post_routehelper/signup_route_helper');
+const routerHelper_login = require('./post_routehelper/login_route_helper');
+const routehelper_car = require('./post_routehelper/car_route_helper');
+const order_route_helper=require('./post_routehelper/order_route_helper');
+const patch_order=require('./patch_routehelper/order_patch_helper');
+const car_status_patch_route=require('./patch_routehelper/car_status_patch_route');
+const car_price_route=require('./patch_routehelper/car-price-patch');
 app.use(express.json());
 
 
@@ -16,7 +16,7 @@ app.post('/api/v1/car', routehelper_car.car);
 app.post('/api/v1/order',order_route_helper.order);
 
 app.patch('/api/v1/order/:id',patch_order.order);
-app.patch('/api/v1/car/status/:id',car_patch_route.car);
+app.patch('/api/v1/car/status/:id',car_status_patch_route.car);
 app.patch('/api/v1/car/price/:id',car_price_route.car);
 
 

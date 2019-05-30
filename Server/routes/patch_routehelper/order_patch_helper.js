@@ -3,7 +3,7 @@ const { orders } = require('../model/model');
 
 module.exports.order = (req, res) => {
   const schema = joi.object().keys({
-    new_price_offered: joi.number().integer(),
+    new_price_offered: joi.number(),
   });
   joi.validate(req.body, schema, (err, value) => {
     if (err) return res.send(err.details[0].message);
