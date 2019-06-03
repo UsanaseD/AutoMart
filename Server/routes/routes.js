@@ -11,6 +11,7 @@ const get_unsold_cars=require('./get_routehelper/get_unsold_cars');
 const get_unsold_cars_price=require('./get_routehelper/get_unsold_cars_with_price_range');
 const get_all_cars=require('./get_routehelper/get_all_cars');
 const post_flag_route=require('./post_routehelper/post_flag_route');
+const get_car_status_state=require('./get_routehelper/get_car_status_state');
 app.use(express.json());
 
 
@@ -28,6 +29,7 @@ app.patch('/api/v1/car/price/:id',car_price_route.car);
 app.get('/api/v1/status/car',get_unsold_cars.car);
 app.get('/api/v1/range/car',get_unsold_cars_price.car);
 app.get('/api/v1/car',get_all_cars.car);
+app.get('/api/v1/car/state/status',get_car_status_state.car);
 
 
 
