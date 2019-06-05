@@ -12,6 +12,7 @@ const get_unsold_cars_price=require('./get_routehelper/get_unsold_cars_with_pric
 const get_all_cars=require('./get_routehelper/get_all_cars');
 const post_flag_route=require('./post_routehelper/post_flag_route');
 const get_car_status_state=require('./get_routehelper/get_car_status_state');
+const get_all_orders=require('./get_routehelper/get_all_orders');
 app.use(express.json());
 
 
@@ -30,6 +31,7 @@ app.get('/api/v1/status/car',get_unsold_cars.car);
 app.get('/api/v1/range/car',get_unsold_cars_price.car);
 app.get('/api/v1/car',get_all_cars.car);
 app.get('/api/v1/car/state/status',get_car_status_state.car);
+app.get('/api/v1/all/order',get_all_orders.order);
 const port = process.env.PORT || 8000;
 app.listen(port, () => console.log(`listening on port ${port}...`));
 module.exports.app=app;
