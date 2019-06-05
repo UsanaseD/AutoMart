@@ -30,8 +30,7 @@ app.get('/api/v1/status/car',get_unsold_cars.car);
 app.get('/api/v1/range/car',get_unsold_cars_price.car);
 app.get('/api/v1/car',get_all_cars.car);
 app.get('/api/v1/car/state/status',get_car_status_state.car);
-
-
-
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 app.listen(port, () => console.log(`listening on port ${port}...`));
+module.exports.app=app;
+
