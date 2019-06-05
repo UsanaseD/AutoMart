@@ -9,6 +9,6 @@ module.exports.car=(req,res)=>{
     const car=cars.find(car=>car.id==parseInt(req.params.id,10));
     if(!car) return res.send('the id provided does not exist');
     car.status=value.status;
-    return res.send(car);
+    return res.status(200).send(car);
 });
 };

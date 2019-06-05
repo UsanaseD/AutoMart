@@ -25,7 +25,7 @@ const cars = [
     manufacturer:'toyota',
     model:'corola',
     price: 3000000,
-    state:'new',
+    state:'old',
     status:'available',
   },
   {
