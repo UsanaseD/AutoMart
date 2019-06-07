@@ -1,14 +1,8 @@
 const joi=require('@hapi/joi');
 const {orders}=require('../../model/model');
+const{orderschema} = require('../../helpers/schema');
 module.exports.order=(req,res)=>{
-    const schema=joi.object().keys({
-        car_id:joi.number().integer(),
-        status:joi.string(),
-        old_price_offered:joi.number().integer(),
-        new_price_offered:joi.number().integer(),
-    });
-    console.log(req.body);
-    joi.validate(req.body,schema,(err,value)=>{
+    joi.validate(req.body,orderschema,(err,value)=>{
          if(err) return res.send(err.details[0].message);
          const ordr={
              id:orders.length+1,
