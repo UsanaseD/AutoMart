@@ -1,5 +1,5 @@
 const joi = require('@hapi/joi');
-const{flags} = require('../model/model');
+const{flags} = require('../../model/model');
 
 module.exports.flag=(req,res)=>{
     const schema=joi.object().keys({

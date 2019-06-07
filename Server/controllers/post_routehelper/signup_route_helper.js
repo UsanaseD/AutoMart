@@ -1,5 +1,7 @@
 const joi = require('@hapi/joi');
-const { users } = require('../model/model');
+const { users } = require('../../model/model');
+const jsonwebtoken = require('jsonwebtoken');
+const secretkey = require('../../config/config');
 module.exports.signup = (req, res) => {
   const schema = joi.object().keys({
     email: joi.string().email({ minDomainSegments: 2 }),
@@ -15,7 +17,18 @@ module.exports.signup = (req, res) => {
       email: value.email,
     };
     users.push(user);
-    res.status(200).send(user);
+    jsonwebtoken.sign({
+      id:user.id,
+      email:user.email
+    },
+
+    secretkey.SECRETKEY,(err,data)=>{
+      user.token=data
+      res.status(200).send(user);
+    }
+    
+    );
+    
   });
 };
 
