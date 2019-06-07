@@ -1,5 +1,5 @@
 const joi=require('@hapi/joi');
-const {cars}=require('../model/model');
+const {cars}=require('../../model/model');
 module.exports.car=(req,res)=>{
     const schema=joi.object().keys({
         price:joi.number(),

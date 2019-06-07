@@ -1,4 +1,4 @@
-const {cars} = require ('../model/model');
+const {cars} = require ('../../model/model');
 module.exports.car =(req,res)=>{
     const status = req.query.status;
     const minPrice = parseInt(req.query.min_price,10);

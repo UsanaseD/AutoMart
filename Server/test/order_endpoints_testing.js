@@ -1,6 +1,6 @@
 const chai=require('chai');
 const chaihttp=require('chai-http');
-const {app}=require('../routes/routes');
+const {app}=require('../../server');
 
 chai.should();
 chai.use(chaihttp);
