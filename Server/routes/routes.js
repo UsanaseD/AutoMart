@@ -14,7 +14,7 @@ const get_all_orders=require('../controllers/get_routehelper/get_all_orders');
 const midleware=require('../midleware/midleware');
 
 module.exports.routeFunc = (app) => {
- app.post('/api/v1/auth/signup', routerHelper_signup.signup);
+app.post('/api/v1/auth/signup', routerHelper_signup.signup);
 app.post('/api/v1/auth/login', routerHelper_login.login);
 app.post('/api/v1/car',midleware.midleware, routehelper_car.car);
 app.post('/api/v1/order',midleware.midleware,order_route_helper.order);

@@ -1,13 +1,8 @@
 const joi = require('@hapi/joi');
 const{flags} = require('../../model/model');
-
+const{flagschema} = require('../../helpers/schema');
 module.exports.flag=(req,res)=>{
-    const schema=joi.object().keys({
-        car_id:joi.number().integer(),
-        reason:joi.string(),
-        description:joi.string(),
-    });
-    joi.validate(req.body,schema,(err,value) => {
+    joi.validate(req.body,flagschema,(err,value) => {
    if (err) return res.send(err.details[0].message);
    const flg={
     id:flags.length+1,
