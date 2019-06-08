@@ -1,6 +1,6 @@
-const users = [];
-const flags =[];
-const orders = [
+export const users = [];
+export const flags = [];
+export const orders = [
   {
     id: 1,
     car_id: 2,
@@ -15,31 +15,28 @@ const orders = [
     createdOn: '2019-05-28T09:04:20.989Z',
     status: 'rejected',
     old_price_offered: 2000000,
-    new_price_offered: 2500000,  
+    new_price_offered: 2500000,
   },
 ];
-const cars = [
+export const cars = [
   {
-    id:1,
-    email:'todiddy20@gmail.com',
-    manufacturer:'toyota',
-    model:'corola',
+    id: 1,
+    email: 'todiddy20@gmail.com',
+    manufacturer: 'toyota',
+    model: 'corola',
     price: 3000000,
-    state:'old',
-    status:'available',
+    state: 'old',
+    status: 'available',
   },
   {
-    id:2,
-    email:'todiddy20@gmail.com',
-    manufacturer:'toyota',
-    model:'corola',
+    id: 2,
+    email: 'todiddy20@gmail.com',
+    manufacturer: 'toyota',
+    model: 'corola',
     price: 4000000,
-    state:'old',
-    status:'available',
+    state: 'old',
+    status: 'available',
   },
 ];
-module.exports.users = users;
-module.exports.cars = cars;
-module.exports.orders = orders;
-module.exports.flags= flags;
+
 
