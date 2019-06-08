@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/UsanaseD/AutoMart/badge.svg?branch=develop)](https://coveralls.io/github/UsanaseD/AutoMart?branch=develop) [![Build Status](https://travis-ci.org/UsanaseD/AutoMart.svg?branch=develop)](https://travis-ci.org/UsanaseD/AutoMart)
+
 ## Auto Mart
 Auto Mart is an online marketplace for automobiles of diverse makes, model or body type.  Auto Mart, users can sell their cars or buy from trusted dealerships or private sellers. 
 
