@@ -1,5 +1,12 @@
-export const users = [];
 export const flags = [];
+export const users = [
+  {
+    firstname: 'Didier',
+    lastname: 'Usanase',
+    email: 'todiddy20@gmail.com',
+    password: 'usanase100',
+  },
+];
 export const orders = [
   {
     id: 1,
