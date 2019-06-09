@@ -24,13 +24,14 @@ export const flagschema = joi.object().keys({
   description: joi.string(),
 });
 export const loginschema = joi.object().keys({
-  email: joi.string().email({ minDomainSegments: 2 }),
-  password: joi.string(),
+  email: joi.string().email({ minDomainSegments: 2 }).required(),
+  password: joi.string().regex(/^[a-zA-Z0-9]{3,30}$/).required(),
 });
 export const signupschema = joi.object().keys({
-  email: joi.string().email({ minDomainSegments: 2 }),
+  email: joi.string().email({ minDomainSegments: 2 }).required(),
   firstname: joi.string(),
   lastname: joi.string(),
+  password: joi.string().regex(/^[a-zA-Z0-9]{3,30}$/).required(),
 });
 export const priceschema = joi.object().keys({
   price: joi.number().integer(),

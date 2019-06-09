@@ -1,6 +1,6 @@
 import joi from '@hapi/joi';
 import { sign } from 'jsonwebtoken';
-import { SECRETKEY } from '../config/config';
+import config from '../config/config';
 import { users } from '../model/model';
 import { loginschema, signupschema } from '../helpers/schema';
 
@@ -9,20 +9,16 @@ class userController {
   loginPost(req, res) {
     joi.validate(req.body, loginschema, (err, value) => {
       if (err) return res.send(err.details[0].message);
-      const user = {
-        email: value.email,
-        password: value.password,
-      };
-
-      users.push(user);
+      const foundUser = users.find(user => user.email === value.email);
+      if(!foundUser) return res.status(409).send('email not exists')
       sign({
-        email: user.email,
-        password: user.password,
+        email: foundUser.email,
+        password: foundUser.password,
       }, 
 
-      SECRETKEY, (err, data) => {
-        user.token = data;
-        res.status(200).send(user);
+      config.SECRETKEY, (err, data) => {
+        foundUser.token = data;
+        res.status(200).send(foundUser);
       },
       );
 
@@ -34,21 +30,24 @@ class userController {
   signupPost(req, res) {
     joi.validate(req.body, signupschema, (err, value) => {
       if (err) return res.send(err.details[0].message);
-      const user = {
+     const foundUser = users.find(user => user.email === value.email);
+     if(foundUser) return res.status(200).send('email already exists')
+      const Newuser = {
         id: users.length + 1,
         firstname: value.firstname,
         lastname: value.lastname,
         email: value.email,
+        password: value.password,
       };
-      users.push(user);
+      users.push(Newuser);
       sign({
-        id: user.id,
-        email: user.email,
+        email: Newuser.email,
+        password: Newuser.password,
       },
 
-      SECRETKEY, (err, data) => {
-        user.token = data;
-        res.status(200).send(user);
+      config.SECRETKEY, (err, data) => {
+        Newuser.token = data;
+        res.status(200).send(Newuser);
       },
 
       );

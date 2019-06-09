@@ -11,8 +11,8 @@ describe('testing of users endpoints', () => {
     request(app)
       .post('/api/v1/auth/login')
       .send({
-        email: 'todiddy20@gmail.com',
-        password: 'kigali',
+        email:'todidy20@gmil.com',
+        password:'usanase100',
       }).end((err, data) => {
         data.should.have.status(200);
         done();
@@ -25,7 +25,8 @@ describe('testing of users endpoints', () => {
       .send({
         firstname: 'Didier',
         lastname: 'Usanase',
-        email: 'todiddy20@gmail.com',
+        email: 'todiddy30@gmail.com',
+        password:'usanase10',
       }).end((err, data) => {
         data.should.have.status(200);
         done();
