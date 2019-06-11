@@ -26,6 +26,18 @@
     background-color: rgb(139, 138, 138);
     height: 70px;
   }
+
+  .topnav a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 50px 50px 50px 50px;
+    background-color: rgb(74, 92, 128);
+  }
+
   form.search{
     margin-top: 15px;
     display: inline-flex;
@@ -95,10 +107,9 @@
   }
 td a{
   text-decoration: none;
-}
-td a:hover{
   color: #ff0000;
 }
+
 td img{
   width:100%;
 }
@@ -141,6 +152,7 @@ td img{
   }
   .fakeimg button{
     background-color: rgb(139, 138, 138);
+    border-radius: 25px 25px 25px 25px;
   }
   .fakeimg a{
     text-decoration: none;

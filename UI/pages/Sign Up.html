@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Home Page</title>
+        <title> Sign Up</title>
         <link rel="stylesheet" type="text/css" href="../css/sign up.css">
 
         <body>
+                <div class="header">
+                        <img src="../images/images.png">
+                        <h1>We Are At Your Service.</h1>
+                      </div>
+                      <div class="nav">
+                          <a href="./aboutus.html">About Us</a> 
+                        <a href="./home.html">Home</a>
+                      </div>
+                      <div class="bground">
                 <div id="signup-box">
+                        
                     <div class="right-box">
                         <h1>REGISTER</h1>
                         <form>
@@ -15,10 +25,8 @@
                             <input type="text" name="email" placeholder=" Enter your email"/>
                             <input type="text" name="Address" placeholder=" Enter Your Address"/>
                             <input type="password" name="password" placeholder=" Enter your password"/>
-                            <input type="radio" name="admincheckbox" value="Male">Male
-                            <input type="radio" name="admincheckbox" value="Female">Female</br>
-                            <input type="checkbox" name="admincheckbox" disabled>Admin?</br>
-                            <button type="submit" name="submit"><a href="client.html">Register</a></button>
+                            <button id="update" type="submit" name="submit"><a href="./member-page.html">Register</a></button></br>
+                            <p>I alredy have an <a href="./login.html">Account</a>
                         </form>
                     </div>
                 <div class="left-box">
@@ -32,6 +40,7 @@
                  </div>
                 </div>
                 </div>
+                <script type="text/javascript" src="../js/signup.js"></script>
                 </body>
                 </head>
                 </html>

@@ -97,7 +97,8 @@
   .centralcolumn {   
     float:left;
     width: 75%;
-    height: 60%;
+    height: 90%;
+    
   }
   
   
@@ -255,7 +256,7 @@
   }
   
   /* Footer */
-  .footer1 {
+  .footer{
     padding: 20px;
     text-align: center;
     background: rgb(139, 138, 138);

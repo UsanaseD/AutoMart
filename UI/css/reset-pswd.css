@@ -7,6 +7,43 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 300;
     }
+    .header {
+        padding: 5px;
+        text-align: center;
+      }
+      .header h1 {
+        font-size: 50px;
+        color:black;
+      }
+      .nav {
+        background-color: rgb(74, 92, 128);
+        height: 60px;
+        color: #ddd;
+        margin-left: 20%;
+        width: 70%;
+      }
+    
+    .nav a{
+    
+      float: right;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px;
+      text-decoration: none;
+      font-size: 20px;
+    }
+    
+    .nav a:hover{
+      background-color: rgb(139, 138, 138);
+    }
+
+    .bground{
+      background-image: url('../images/dd.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100%;
+  }
     
     #reset-box{
     position: relative;

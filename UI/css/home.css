@@ -76,7 +76,7 @@ background-color: rgb(139, 138, 138);
 
 
 .topnav a {
-  float: left;
+  float: right;
   display: block;
   color: #f2f2f2;
   text-align: center;
@@ -111,6 +111,7 @@ table td{
 }
 td a{
   text-decoration: none;
+  color: #ff0000;
 }
 td a:hover{
   color: #ff0000;
@@ -121,6 +122,7 @@ td a:hover{
   float: right;
   width: 25%;
   padding-left: 20px;
+  height: 80%;
 
 }
 .fakeimg{
@@ -217,7 +219,7 @@ td img{
 button.social{
   margin-top: 20px;
   width: 220px;
-  height: 36px;
+  height: 20px;
   border: none;
   border-radius: 2px;
   font-weight: 800;
@@ -225,7 +227,7 @@ button.social{
   cursor: pointer;
   }
   button.social:hover{
-    height: 50px;
+    height: 36px;
     width: 250px;
   }
   .fcbk{
@@ -255,7 +257,7 @@ button.social{
 }
 
 /* Footer */
-.footer1 {
+.footer {
   padding: 20px;
   text-align: center;
   background: rgb(139, 138, 138);
