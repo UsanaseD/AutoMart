@@ -1,19 +1,24 @@
-function openPage(pageName,elmnt,color) {
-    // Hide all elements with class="tabcontent" by default */
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
+const defaultBtn = document.getElementById('register');
+const updatetBtn = document.getElementById('update');
+const registered = document.getElementById('nwcar');
+const updated = document.getElementById('xtdcar');
 
-  // Remove the background color of all tablinks/buttons
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  // Show the specific tab content
-  document.getElementById(pageName).style.display = "block";
+window.addEventListener('load', (e) =>{
+  registered.style.display = 'block';
+  defaultBtn.style.background = 'blue';
+  updatetBtn.style.background = '#32508e';
+});
 
-  //Add the specific color to the button used to open the tab content
-  elmnt.style.backgroundColor = color;
-}
+updatetBtn.addEventListener('click', (e) => {
+  registered.style.display = 'none';
+updated.style.display = 'block';
+updatetBtn.style.background = 'blue';
+defaultBtn.style.background = '#32508e';
+});
+
+defaultBtn.addEventListener('click', (e) => {
+  updated.style.display = 'none';
+  registered.style.display = 'block';
+ defaultBtn.style.background = 'blue';
+ updatetBtn.style.background = '#32508e';
+});

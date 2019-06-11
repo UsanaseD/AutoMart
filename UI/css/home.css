@@ -54,7 +54,23 @@ form.search button{
 .nav {
   overflow: hidden;
   background-color: rgb(74, 92, 128);
-  height: 30px;
+  height: 60px;
+  color: #ddd;
+}
+
+.nav a{
+
+float: right;
+display: block;
+color: #f2f2f2;
+text-align: center;
+padding: 14px;
+text-decoration: none;
+font-size: 20px;
+}
+
+.nav a:hover{
+background-color: rgb(139, 138, 138);
 }
 /* Style the topnav links */
 
@@ -66,6 +82,8 @@ form.search button{
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  border-radius: 50px 50px 50px 50px;
+  background-color: rgb(74, 92, 128);
 }
 
 /* Change color on hover */

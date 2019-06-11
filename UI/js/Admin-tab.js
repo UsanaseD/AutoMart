@@ -1,14 +1,24 @@
-function openPage(pageName,elmnt) {
-    // Hide all elements with class="tabcontent" by default */
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
+const defaultBtn = document.getElementById('defaultOpenbtn');
+const reportBtn = document.getElementById('reportedbtn');
+const ads = document.getElementById('ads');
+const report = document.getElementById('reported');
 
-  // Show the specific tab content
-  document.getElementById(pageName).style.display = "block";
-}
-  
-  document.getElementById("defaultOpen").click();
+window.addEventListener('load', (e) =>{
+  ads.style.display = 'block';
+  defaultBtn.style.background = 'blue';
+  reportBtn.style.background = '#32508e';
+});
 
+reportBtn.addEventListener('click', (e) => {
+  ads.style.display = 'none';
+report.style.display = 'block';
+reportBtn.style.background = 'blue';
+defaultBtn.style.background = '#32508e';
+});
+
+defaultBtn.addEventListener('click', (e) =>{
+  report.style.display = 'none';
+  ads.style.display = 'block';
+  reportBtn.style.background = '#32508e';
+  defaultBtn.style.background = 'blue';
+});

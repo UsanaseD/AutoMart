@@ -54,21 +54,22 @@
   .nav {
     overflow: hidden;
     background-color: rgb(74, 92, 128);
-    height: 30px;
+    height: 60px;
   }
   /* Style the topnav links */
-  .nav a {
-    float: left;
+  .nav a{
+  
+    float: right;
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 10px 12px;
+    padding: 14px;
     text-decoration: none;
-  }
+    font-size: 20px;
+    }
   
   .nav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: rgb(139, 138, 138);
   }
 
   /* Create two unequal columns that floats next to each other */
@@ -138,9 +139,11 @@ td img{
    border:none;
    border-radius: 15px;
   }
+  .fakeimg button{
+    background-color: rgb(139, 138, 138);
+  }
   .fakeimg a{
     text-decoration: none;
-    border-bottom: 1px solid white;
     font-size: 15px;
     font-weight: bold;
     color: white;
