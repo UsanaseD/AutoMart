@@ -73,12 +73,9 @@ it('test to create an order', (done) => {
 
   // test to update a car's status by id
   it('place for end users to update a car s  status by id', (done) => {
-    request(app)
-      .get('/api/v1/car')
-      .set({ Authorization: `Bearer ${global.myToken}` })
-      .end((err, data) => {
+
         request(app)
-          .patch(`/api/v1/car/status/${data.body[0].id}`)
+          .patch('/api/v1/car/status/1')
           .set({ Authorization: `Bearer ${global.myToken}` })
           .send({
             status: 'old',
@@ -87,33 +84,25 @@ it('test to create an order', (done) => {
             response.body.should.be.a('object');
             done();
           });
-      });
   });
 
   // test for enduser to select a spesific car
   it('test for enduser to select a spesific car', (done) => {
-    request(app)
-      .get('/api/v1/car')
-      .set({ Authorization: `Bearer ${global.myToken}` })
-      .end((err, data) => {
+
         request(app)
-          .get(`/api/v1/car/${data.body[0].id}`)
+          .get('/api/v1/car/1')
           .set({ Authorization: `Bearer ${global.myToken}` })
           .end((err, response) => {
             response.body.should.be.a('object');
             done();
           });
-      });
   });
 
   // test to update a car's price by id
   it('place for end users to update a car s  price by id', (done) => {
-    request(app)
-      .get('/api/v1/car')
-      .set({ Authorization: `Bearer ${global.myToken}` })
-      .end((err, data) => {
+
         request(app)
-          .patch(`/api/v1/car/price/${data.body[0].id}`)
+          .patch('/api/v1/car/price/1')
           .set({ Authorization: `Bearer ${global.myToken}` })
           .send({
             price: 6000000,
@@ -122,8 +111,7 @@ it('test to create an order', (done) => {
             response.body.should.be.a('object');
             done();
           });
-      });
-  });
+        });
   // test to get cars by status
   it('place for end users to select cars by status', (done) => {
     request(app)
@@ -186,12 +174,8 @@ it('test to create an order', (done) => {
   });
   // test to update an order price by id
   it('test to update an order price by id', (done) => {
-    request(app)
-      .get('/api/v1/order')
-      .set({ Authorization: `Bearer ${global.myToken}` })
-      .end((err, data) => {
         request(app)
-          .patch(`/api/v1/order/${data.body[0].id}`)
+          .patch('/api/v1/order/1')
           .set({ Authorization: `Bearer ${global.myToken}` })
           .send({
             new_price_offered: 5000000,
@@ -204,18 +188,13 @@ it('test to create an order', (done) => {
   });
 
   it('test for enduser to delete a spesific car', (done) => {
-    request(app)
-      .get('/api/v1/car')
-      .set({ Authorization: `Bearer ${global.myToken}` })
-      .end((err, data) => {
         request(app)
-          .delete(`/api/v1/car/${data.body[0].id}`)
+          .delete('/api/v1/car/1')
           .set({ Authorization: `Bearer ${global.myToken}` })
           .end((err, response) => {
             response.body.should.be.a('object');
             done();
           });
-      });
   });
 
-});
+

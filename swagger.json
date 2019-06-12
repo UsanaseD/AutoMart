@@ -37,7 +37,7 @@
             }
           ],
           "responses": {
-            "201": {
+            "200": {
               "description": "User account created!",
               "schema": {
                 "$ref": "#/definitions/signup"
@@ -46,7 +46,7 @@
           }
         }
       },
-      "/auth/signin": {
+      "/auth/login": {
         "post": {
           "tags": [
             "Authentication"
@@ -187,7 +187,7 @@
         }
       },
 
-      "/all/order'": {
+      "/order'": {
         "get": {
           "tags": [
             "order"
@@ -206,7 +206,7 @@
             "200": {
               "description": "Success",
               "schema": {
-                "$ref": "#/definitions/all/order"
+                "$ref": "#/definitions/order"
               }
             }
           }
@@ -244,7 +244,7 @@
           ],
           "responses": {
             "200": {
-              "description": "Specific cars"
+              "description": "Specific cars displayed"
             }
           }
         }
@@ -280,7 +280,52 @@
         }
       },
 
-      "/range/car": {
+      
+      "/order/{id}":{
+
+        "patch":{
+            "tags":[
+                "order"
+            ],
+            "summary":"update order's status",
+            "produces":[
+                "application/json"
+            ],
+
+                "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "type": "string",
+              "description": "Admin token",
+              "required": true
+            },
+            {
+              "name": "id",
+              "in": "query",
+              "required": true,
+              "type": "integer",
+              "description": "car id"
+            },
+            {
+              "name": "Id",
+              "in": "body",
+              "required": true,
+              "description": "car identifier",
+              "schema": {
+                "$ref": "#/definitions/car"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "car retreived!"
+            }
+          }
+        }
+      },
+
+      "/car/range": {
         "get": {
           "tags": [
             "Car"
@@ -325,9 +370,54 @@
         }
       },
 
-      "/order/{id}":{
+      "/car/{id}":{
 
-        "patch":{
+        "Delete":{
+            "tags":[
+                "car"
+            ],
+            "summary":"delete car",
+            "produces":[
+                "application/json"
+            ],
+
+                "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "type": "string",
+              "description": "Admin token",
+              "required": true
+            },
+            {
+              "name": "id",
+              "in": "query",
+              "required": true,
+              "type": "integer",
+              "description": "car id"
+            },
+            {
+              "name": "Id",
+              "in": "body",
+              "required": true,
+              "description": "car identifier",
+              "schema": {
+                "$ref": "#/definitions/car{id}"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "car deleted!"
+            }
+          }
+        }
+      },
+
+
+      "/car/{id}":{
+
+        "Get":{
             "tags":[
                 "order"
             ],
@@ -349,16 +439,7 @@
               "in": "path",
               "required": true,
               "type": "integer",
-              "description": "Order Id"
-            },
-            {
-              "name": "status",
-              "in": "body",
-              "required": true,
-              "description": "Order status (approved or pending",
-              "schema": {
-                "$ref": "#/definitions/order"
-              }
+              "description": "car id"
             }
           ],
           "responses": {
@@ -369,7 +450,8 @@
         }
       },
 
-      "/car/status/{id}":{
+
+    "/car/status/{id}":{
 
         "patch":{
             "tags":[
@@ -428,6 +510,12 @@
           },
           "password": {
             "type": "string"
+          },
+          "address":{
+            "type":"string"
+          },
+          "admin":{
+            "type":"boolean"
           }
         }
       },
