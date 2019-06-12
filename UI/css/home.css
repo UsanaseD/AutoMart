@@ -72,25 +72,7 @@ font-size: 20px;
 .nav a:hover{
 background-color: rgb(139, 138, 138);
 }
-/* Style the topnav links */
 
-
-.topnav a {
-  float: right;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  border-radius: 50px 50px 50px 50px;
-  background-color: rgb(74, 92, 128);
-}
-
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
 
 /* Create two unequal columns that floats next to each other */
 /* Left column */

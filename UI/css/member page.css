@@ -27,16 +27,6 @@
     height: 70px;
   }
 
-  .topnav a {
-    float: right;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    border-radius: 50px 50px 50px 50px;
-    background-color: rgb(74, 92, 128);
-  }
 
   form.search{
     margin-top: 15px;
