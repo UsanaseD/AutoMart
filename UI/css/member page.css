@@ -20,14 +20,11 @@
     font-size: 50px;
   }
   
-  /* Style the top navigation bar */
   .topnav {
     overflow: hidden;
     background-color: rgb(139, 138, 138);
     height: 70px;
   }
-
-
   form.search{
     margin-top: 15px;
     display: inline-flex;

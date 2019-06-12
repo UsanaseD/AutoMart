@@ -42,6 +42,11 @@ body{
     .nav a:hover{
       background-color: rgb(139, 138, 138);
     }
+    .topnav {
+      overflow: hidden;
+      background-color: rgb(139, 138, 138);
+      height: 70px;
+    }
     .center{
       margin-left: 20%;
       width: 95%;
@@ -50,7 +55,7 @@ body{
     #car-reg-box{
     position: relative;
     left: 20%;
-    height: 530px;
+    height: 580px;
     width: 600px;
     box-shadow: 0 2px 4p rgba(0, 0, 0, 0.6);
     background: #fff;
