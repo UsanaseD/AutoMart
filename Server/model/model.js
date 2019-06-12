@@ -1,49 +1,23 @@
 export const flags = [];
-export const users = [
-  {
-    firstname: 'Didier',
-    lastname: 'Usanase',
-    email: 'todiddy20@gmail.com',
-    password: 'usanase100',
-  },
-];
-export const orders = [
-  {
-    id: 1,
-    car_id: 2,
-    createdOn: '2019-05-28T09:04:20.989Z',
-    status: 'pending',
-    old_price_offered: 2000000,
-    new_price_offered: 2500000,
-  },
-  {
-    id: 2,
-    car_id: 2,
-    createdOn: '2019-05-28T09:04:20.989Z',
-    status: 'rejected',
-    old_price_offered: 2000000,
-    new_price_offered: 2500000,
-  },
+export const users = [];
+export const orders = [{
+    "car_id":2,
+	"status":"new",
+	"old_price_offered":3000000,
+     "new_price_offered":4000000
+}
 ];
 export const cars = [
-  {
-    id: 1,
-    email: 'todiddy20@gmail.com',
-    manufacturer: 'toyota',
-    model: 'corola',
-    price: 3000000,
-    state: 'old',
-    status: 'available',
-  },
-  {
-    id: 2,
-    email: 'todiddy20@gmail.com',
-    manufacturer: 'toyota',
-    model: 'corola',
-    price: 4000000,
-    state: 'old',
-    status: 'available',
-  },
+    {
+        id: 1,
+        email: "todiddy20@gmail.com",
+        date: '2019-06-12T13:15:50.060Z',
+        manufacturer: "value.manufacturer",
+        model: "value.model",
+        price: 3000,
+        state: "new",
+        status: "Available"
+    }
 ];
 
 
