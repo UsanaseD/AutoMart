@@ -9,8 +9,7 @@ export const carschema = joi.object().keys({
   manufacturer: joi.string(),
   model: joi.string(),
   price: joi.number().integer(),
-  state: joi.string(),
-  status: joi.string(),
+  state: joi.string().regex(/^['new','used']{3,4}$/),
 });
 export const orderschema = joi.object().keys({
   car_id: joi.number().integer(),
@@ -31,6 +30,9 @@ export const signupschema = joi.object().keys({
   email: joi.string().email({ minDomainSegments: 2 }).required(),
   firstname: joi.string(),
   lastname: joi.string(),
+  address: joi.string().alphanum().min(5).max(20)
+    .required(),
+  admin: joi.boolean(),
   password: joi.string().regex(/^[a-zA-Z0-9]{3,30}$/).required(),
 });
 export const priceschema = joi.object().keys({

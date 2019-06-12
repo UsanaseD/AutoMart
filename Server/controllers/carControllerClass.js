@@ -5,11 +5,13 @@ import {
   orderschema, flagschema,
   orderpatchschema, carschema,
 } from '../helpers/schema';
+import { stat } from 'fs';
 
 class carController {
 // function to select all cars
   getAllCars(req, res) {
     res.status(200).send(cars);
+
   }
 
   // function to select all orders
@@ -48,6 +50,27 @@ class carController {
     if (!car) return res.send('there is no cars with Available Status');
     res.status(200).send(car);
   }
+
+  //function to select a car by id
+
+  specifedCar(req, res) {
+    const car = cars.find(car => car.id == req.params.id);
+    if (!car) return res.send('there is no cars with this Id');
+    res.status(200).send(car);
+  }
+
+//function to to delete a specified car
+
+deleteCar(req, res){
+  joi.validate(req.body, statusSchema, (err, value) =>{
+    if (err) return res.send(err.details[0].message);
+    const car = cars.find(car => car.id == parseInt(req.params.id,10));
+    if (!car) return res.status(404).send('the id provided does not exist');
+    const index = cars.indexOf(car);
+    cars.splice(index,1);
+    res.send(car);
+  });
+};
 
   // function to update a car's status
   carPatchStatus(req, res) {
@@ -94,7 +117,7 @@ class carController {
         model: value.model,
         price: value.price,
         state: value.state,
-        status: value.status,
+        status: 'Available',
       };
       cars.push(ride);
       res.status(200).send(ride);
