@@ -44,30 +44,33 @@ npm run test  #'run the test '
 
 ## EndPoints
 
-To test all these endpoints localally you should use postman chrom
+To test all these endpoints localally you should use postman chrom.
+ check their HTTP Methods (before endpoints)
 
 * car endpoints
 
 ```bash
-/api/v1/car #'endpoint to post a car'
-/api/v1/car/status/:id # 'endpoint to select a car by status & id'
-/api/v1/car/price/:id #'endpoint to select a car by price & id'
-/api/v1/status/car  #'endpoint to select a car by status'
-/api/v1/range/car   #'endpoint to select a car by price range'
-/api/v1/car #'endpoint to select all cars'
-/api/v1/car/state/status #'endpoint to select a car by state & status'
+(POST)/api/v1/car #'endpoint to post a car'
+(GET)/api/v1/car/status/:id # 'endpoint to select a car by status & id'
+(GET)/api/v1/car/price/:id #'endpoint to select a car by price & id'
+(GET)/api/v1/car/status  #'endpoint to select a car by status'
+(GET)/api/v1/car/range   #'endpoint to select a car by price range'
+(GET)/api/v1/car #'endpoint to select all cars'
+(GET)/api/v1/car/state/status #'endpoint to select a car by state & status'
+(GET)/api/v1/car/:id #'route to select car by id'
+(DELETE)/api/v1/car/:id #'route to delete a car by id'
 ```
 * Authentication endpoints
 ```bash
-/api/v1/auth/signup #'endpoint to signup'
-/api/v1/auth/login  #'endpoint to login'
+(POST)/api/v1/auth/signup #'endpoint to signup'
+(POST)/api/v1/auth/login  #'endpoint to login'
 ```
 * Ordering endpoints
 ```bash
-/api/v1/order #'endpoint to press an order'
-/api/v1/all/order  #'endpoint to see all orders'
+(POST)/api/v1/order #'endpoint to press an order'
+(GET)/api/v1/order  #'endpoint to see all orders'
 ```
 * flagging endpoint
 ```bash
-/api/v1/flag #'endpoint to flag a car'
+(POST)/api/v1/flag #'endpoint to flag a car'
 ```
