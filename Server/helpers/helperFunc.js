@@ -1,5 +1,6 @@
 export default (NewUser) => {
   const user = {
+  
     firstname: NewUser.firstname,
     lastname: NewUser.lastname,
     email: NewUser.email,

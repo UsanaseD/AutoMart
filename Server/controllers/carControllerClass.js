@@ -5,7 +5,6 @@ import {
   orderschema, flagschema,
   orderpatchschema, carschema,
 } from '../helpers/schema';
-import { stat } from 'fs';
 
 class carController {
 // function to select all cars
@@ -21,6 +20,7 @@ class carController {
 
   // function to select cars by state & status
   getCarStatusState(req, res) {
+
     const car = cars.filter(car => car.status == req.query.status && (car.state == req.query.state));
     res.status(200).send(car);
   }
@@ -51,7 +51,7 @@ class carController {
     res.status(200).send(car);
   }
 
-  //function to select a car by id
+  // function to select a car by id
 
   specifedCar(req, res) {
     const car = cars.find(car => car.id == req.params.id);
@@ -59,18 +59,18 @@ class carController {
     res.status(200).send(car);
   }
 
-//function to to delete a specified car
+  // function to to delete a specified car
 
-deleteCar(req, res){
-  joi.validate(req.body, statusSchema, (err, value) =>{
-    if (err) return res.send(err.details[0].message);
-    const car = cars.find(car => car.id == parseInt(req.params.id,10));
-    if (!car) return res.status(404).send('the id provided does not exist');
-    const index = cars.indexOf(car);
-    cars.splice(index,1);
-    res.send(car);
-  });
-};
+  deleteCar(req, res) {
+    joi.validate(req.body, statusSchema, (err, value) => {
+      if (err) return res.send(err.details[0].message);
+      const car = cars.find(car => car.id == parseInt(req.params.id, 10));
+      if (!car) return res.status(404).send('the id provided does not exist');
+      const index = cars.indexOf(car);
+      cars.splice(index, 1);
+      res.send(car);
+    });
+  }
 
   // function to update a car's status
   carPatchStatus(req, res) {
