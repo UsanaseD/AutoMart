@@ -1,279 +1,578 @@
+#about us CSS
+
+==============
+
 *{
+
     box-sizing: border-box;
+
   }
+
   
+
   body {
+
     background: white;
+
     font-family: Arial;
+
     padding: 0px;
+
     color: #0c0b0b;
+
   }
+
   
+
   /* Header/Title */
+
   .header {
+
     padding: 5px;
+
     text-align: center;
+
   }
+
   
+
   .header h1 {
+
     font-size: 50px;
+
   }
+
   
+
   /* Style the top navigation bar */
+
   .topnav {
+
     overflow: hidden;
+
     background-color: rgb(139, 138, 138);
+
     height: 70px;
+
   }
+
   form.search{
+
     margin-top: 15px;
+
     display: inline-flex;
+
     font-size: 20px;
+
     margin-left: 20%;
+
   }
+
   form.search input[type=text] {
+
     width: 400px;
+
     font-size: inherit;
+
     border:0.2em solid #ddd;
+
     border-radius: 0.5em 0 0 0.5em;
+
     padding: 0.2em 0.5em;
+
     outline: none;
+
   }
+
   form.search button{
+
     font-size: inherit;
+
     border:0.2em solid #ddd ;
+
     border-radius: 0 0.5em 0.5em 0;
+
     border-left: 0;
+
     padding: 0 0.75em;
+
     outline: 0;
+
     cursor: pointer;
+
     background-color: rgb(255, 255, 255);
+
     height: 39px;
+
   }
+
   /* Style the top navigation bar */
+
   .nav {
+
     overflow: hidden;
+
     background-color: rgb(74, 92, 128);
+
     height: 60px;
+
     color: #ddd;
+
   }
+
   
+
   .nav a{
+
   
+
   float: right;
+
   display: block;
+
   color: #f2f2f2;
+
   text-align: center;
+
   padding: 14px;
+
   text-decoration: none;
+
   font-size: 20px;
+
   }
+
   
+
   .nav a:hover{
+
   background-color: rgb(139, 138, 138);
+
   }
+
   /* Style the topnav links */
+
   
+
   
+
   .topnav a {
+
     float: left;
+
     display: block;
+
     color: #f2f2f2;
+
     text-align: center;
+
     padding: 14px 16px;
+
     text-decoration: none;
+
     border-radius: 50px 50px 50px 50px;
+
     background-color: rgb(74, 92, 128);
+
   }
+
   
+
   /* Change color on hover */
+
   .topnav a:hover {
+
     background-color: #ddd;
+
     color: black;
+
   }
+
   
+
   /* Create two unequal columns that floats next to each other */
+
   /* Left column */
+
   .centralcolumn {   
+
     float:left;
+
     width: 75%;
+
     height: 90%;
+
     
+
   }
+
   
+
   
+
   table tH{
+
     background: grey;
+
     color: #ddd;
+
   }
+
   table td{
+
     border: none;
+
   
+
   }
+
   td a{
+
     text-decoration: none;
+
   }
+
   td a:hover{
+
     color: #ff0000;
+
   }
+
   
+
   /* Right column */
+
   .rightcolumn {
+
     float: right;
+
     width: 25%;
+
     padding-left: 20px;
+
   
+
   }
+
   .fakeimg{
+
    margin-top: 3px;
+
    background:rgb(74, 92, 128);
+
    padding: 10px;
+
    color: #ddd;
+
    font-size: 20px;
+
    border:none;
+
    border-radius: 15px;
+
   }
+
   button a{
+
     text-decoration: none;
+
     color: #ddd;
+
   }
+
   button a:hover{
+
     text-decoration: none;
+
     color: #ddd;
+
   }
+
   .fakeimg1{
+
     margin-top: 3px;
+
     margin-left: 1%;
+
     background:url("../images/images.png");
+
     background-size: cover;
+
     background-repeat: no-repeat;
+
     background-size: cover;
+
     padding: 20px;
+
     font-size: 20px;
+
     width: 100%;
+
     
+
    }
+
   
+
   
+
   .styled-select select {
+
     border: none;
+
     border-radius: 30px;
+
     color: rgb(17, 16, 16);
+
     background: white;
+
     font-size: 18px;
+
     padding: 2px 10px;
+
     width: 170px;
+
   }
+
   
+
   
+
   /* Add a card effect for articles */
+
   .card {
+
     background-color: white;
-    padding: 20px;
-    margin-top: 20px;
+
+    padding: 10px;
+
+    margin-top: 5px;
+
     color: black;
+
     border: 3px solid rgb(74, 92, 128) ;
+
     border-radius: 25px;
+
   }
+
   table tr:hover{
+
     background: grey;
+
     color:white;
+
   }
+
   table tH{
+
     background: grey;
+
     color: #ddd;
+
   }
+
   table td{
+
     border: none;
+
     border-right: 1px solid #32508e;
+
     border-bottom: 1px solid #32508e;
+
   }
+
   td a{
+
     text-decoration: none;
+
     color: red;
+
   }
+
   td a:hover{
+
     color: #ddd;
+
   }
+
   td img{
+
     width:100%;
+
   }
+
   .order{
+
     background: rgb(74, 92, 128);
+
     height: 40px;
+
     border: none;
+
     color: #ddd;
+
   }
+
   .order:hover{
+
     background: chocolate;
+
     color: #ddd;
+
   }
+
   
+
   
+
   .aboutus{
+
     background: white;
+
     color: #000000;
+
     font-family: Georgia, 'Times New Roman', Times, serif;
+
+    overflow: scroll;
+
+    font-size:11pt;
+
   }
+
   button.social{
-    margin-top: 20px;
+
+    margin-top: 15px;
+
     width: 220px;
-    height: 40px;
+
+    height: 35px;
+
     border: none;
+
     border-radius: 2px;
-    font-weight: 800;
+
     transition: 0.2s ease;
+
     cursor: pointer;
+
     }
+
     button.social:hover{
-      height: 40px;
+
+      height: 50px;
+
       width: 250px;
+
     }
+
     .fcbk{
+
       background: #32508e;
+
     }
+
     .twt{
+
       background: #55acee;
+
     }
+
     .ytb
+
     {
+
       background: #a50808;
+
+    }
+
+    .sclk a
+
+    {
+
+    display: block;
+
+    text-decoration: none;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    position: relative;
+
+    color: #ddd
+
+  }
+
+  
+
+  /* Clear floats after the columns */
+
+  .row:after {
+
+    content: "";
+
+    display: table;
+
+    clear: both;
+
+  }
+
+  
+
+  /* Footer */
+
+  .footer{
+
+    padding: 20px;
+
+    text-align: center;
+
+    background: rgb(139, 138, 138);
+
+    margin-top: 20px;
+
+    color: #f2f2f2;
+
+  }
+
+  
+
+  
+
+  
+
+  
+
+  /* Responsive layout - when the screen is less than 1000px wide, make the two columns stack on top of each other instead of next to each other */
+
+  @media screen and (max-width: 1000px) {
+
+  .centralcolumn, .rightcolumn,
+
+  .card, .fakeimg,
+
+  .form.search button, .topnav, .topnav a ,
+
+  table,body,.sclk,table tr,
+
+  .car-card,.fakeimg,.styled-select select
+
+  {
+
+    width: 100%;
+
+    padding: 0;
+
+    float:none;
+
     }
 
   
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+
   
-  /* Footer */
-  .footer{
-    padding: 20px;
-    text-align: center;
-    background: rgb(139, 138, 138);
-    margin-top: 20px;
-    color: #f2f2f2;
-  }
-  
-  
-  
-  
-  /* Responsive layout - when the screen is less than 1000px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 1000px) {
-  .centralcolumn, .rightcolumn,
-  .card, .fakeimg,
-  .form.search button, .topnav, .topnav a ,
-  table,body,.sclk,table tr,
-  .car-card,.fakeimg,.styled-select select
-  {
-    width: 100%;
-    padding: 0;
-    float:none;
+
     }
+
   
+
   
-    }
-  
-  
+
