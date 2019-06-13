@@ -140,6 +140,7 @@ td img{
   .fakeimg button{
     background-color: rgb(139, 138, 138);
     border-radius: 25px 25px 25px 25px;
+    height: 50px;
   }
   .fakeimg a{
     text-decoration: none;
@@ -193,7 +194,7 @@ button.social{
   cursor: pointer;
   }
   button.social:hover{
-    height: 50px;
+    height:40px;
     width: 250px;
   }
   .fcbk{

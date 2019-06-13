@@ -42,11 +42,6 @@ body{
     .nav a:hover{
       background-color: rgb(139, 138, 138);
     }
-    .topnav {
-      overflow: hidden;
-      background-color: rgb(139, 138, 138);
-      height: 70px;
-    }
     .center{
       margin-left: 20%;
       width: 95%;

@@ -103,6 +103,7 @@
     float: right;
     width: 25%;
     padding-left: 20px;
+    height: 60%;
 
   }
   .fakeimg{
@@ -187,7 +188,7 @@
   button.social{
     margin-top: 20px;
     width: 220px;
-    height: 36px;
+    height: 30px;
     border: none;
     border-radius: 2px;
     font-weight: 800;
@@ -195,7 +196,7 @@
     cursor: pointer;
     }
     button.social:hover{
-      height: 50px;
+      height: 30px;
       width: 250px;
     }
     .fcbk{
@@ -208,14 +209,7 @@
     {
       background: #a50808;
     }
-    .sclk a
-    {
-    display: block;
-    text-decoration: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    position: relative;
-    color: #ddd
-  }
+
   
   /* Clear floats after the columns */
   .row:after {
