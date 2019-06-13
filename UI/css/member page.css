@@ -184,12 +184,12 @@ td img{
   }
 
 button.social{
-  margin-top: 30px;
+  margin-top: 10px;
   width: 220px;
   height: 25px;
   border: none;
   border-radius: 2px;
-  font-weight: 800;
+  font-weight: 300;
   transition: 0.2s ease;
   cursor: pointer;
   }
