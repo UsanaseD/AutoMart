@@ -18,12 +18,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var app = (0, _express["default"])();
 app.use(_bodyParser["default"].json()); // reads json data and sends them to (app)
 
-app.use(function (err, req, res) {
-  return res.status(404).send({
-    status: 404,
-    message: 'invalid url'
-  });
-});
 (0, _routes["default"])(app);
 var port = process.env.PORT || _config["default"].PORT;
 app.listen(port, function () {
