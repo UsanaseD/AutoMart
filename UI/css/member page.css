@@ -183,19 +183,23 @@ td img{
     border-radius: 25px;
   }
 
-button.social{
-  margin-top: 20px;
-  width: 220px;
-  height: 40px;
-  border: none;
-  border-radius: 2px;
-  transition: 0.2s ease;
-  cursor: pointer;
-  }
-  button.social:hover{
-    height:50px;
-    width: 250px;
-  }
+  button.social{
+    margin-top: 40px;
+    width: 220px;
+    height: 30px;
+    border: none;
+    border-radius: 2px;
+    font-weight: 800;
+    transition: 0.2s ease;
+    cursor: pointer;
+    }
+    button.social:hover{
+
+      height: 50px;
+
+      width: 250px;
+
+    }
   .fcbk{
     background: #32508e;
   }
