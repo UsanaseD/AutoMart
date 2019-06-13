@@ -1,6 +1,6 @@
 import { should, use, request } from 'chai';// test frame work
 import chaihttp from 'chai-http';// toenable chai to make a request using http
-import app from '../../server';// to call server
+import app from '../server';// to call server
 
 should();
 use(chaihttp);

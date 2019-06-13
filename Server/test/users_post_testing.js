@@ -1,6 +1,6 @@
 import { should, use, request } from 'chai';
 import chaihttp from 'chai-http';
-import app from '../../server';
+import app from '../server';
 
 should();
 use(chaihttp);
