@@ -185,7 +185,7 @@ td img{
 
 button.social{
   margin-top: 2px;
-  width: 220px;
+  width: 50px;
   height: 15px;
   border: none;
   border-radius: 2px;
@@ -194,7 +194,6 @@ button.social{
   }
   button.social:hover{
     height:30px;
-    width: 250px;
   }
   .fcbk{
     background: #32508e;
