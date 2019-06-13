@@ -5,12 +5,6 @@ import prt from './config/config';
 
 const app = express();
 app.use(bodyparser.json());// reads json data and sends them to (app)
-app.use((err, req, res) => {
-  return res.status(404).send({ 
-    status:404,
-    message:'invalid url'
-  });
-});
 routefunc(app);
 const port = process.env.PORT || prt.PORT;
 
