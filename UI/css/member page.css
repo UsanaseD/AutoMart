@@ -184,9 +184,9 @@ td img{
   }
 
 button.social{
-  margin-top: 60px;
+  margin-top: 30px;
   width: 220px;
-  height: 45px;
+  height: 25px;
   border: none;
   border-radius: 2px;
   font-weight: 800;
@@ -194,7 +194,7 @@ button.social{
   cursor: pointer;
   }
   button.social:hover{
-    height:50px;
+    height:40px;
     width: 250px;
   }
   .fcbk{
