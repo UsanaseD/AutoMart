@@ -140,7 +140,7 @@ td img{
   .fakeimg button{
     background-color: rgb(139, 138, 138);
     border-radius: 25px 25px 25px 25px;
-    height: 10px;
+    height: 50px;
   }
   .fakeimg a{
     text-decoration: none;
@@ -185,7 +185,7 @@ td img{
 
 button.social{
   margin-top: 2px;
-  width: 50px;
+  width: 220px;
   height: 15px;
   border: none;
   border-radius: 2px;
@@ -194,6 +194,7 @@ button.social{
   }
   button.social:hover{
     height:30px;
+    width: 250px;
   }
   .fcbk{
     background: #32508e;
