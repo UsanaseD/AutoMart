@@ -421,20 +421,14 @@
   
 
   button.social{
-    margin-top: 20px;
-
+    margin-top: 40px;
     width: 220px;
-
-    height: 35px;
-
+    height: 30px;
     border: none;
-
     border-radius: 2px;
-
+    font-weight: 800;
     transition: 0.2s ease;
-
     cursor: pointer;
-
     }
 
     button.social:hover{
