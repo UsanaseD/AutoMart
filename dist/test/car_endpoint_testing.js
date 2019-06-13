@@ -4,7 +4,7 @@ var _chai = require("chai");
 
 var _chaiHttp = _interopRequireDefault(require("chai-http"));
 
-var _server = _interopRequireDefault(require("../../server"));
+var _server = _interopRequireDefault(require("../server"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
