@@ -420,24 +420,9 @@
 
   
 
-  
-
-  .aboutus{
-
-    background: white;
-
-    color: #000000;
-
-    font-family: Georgia, 'Times New Roman', Times, serif;
-
-    overflow: scroll;
-
-    font-size:11pt;
-
-  }
-
   button.social{
     margin-top: 20px;
+
     width: 220px;
 
     height: 35px;
