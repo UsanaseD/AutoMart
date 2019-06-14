@@ -9,15 +9,13 @@ var _joi = _interopRequireDefault(require("@hapi/joi"));
 
 var _jsonwebtoken = require("jsonwebtoken");
 
-var _config = _interopRequireDefault(require("../config/config"));
+var _bcrypt = _interopRequireDefault(require("bcrypt"));
 
 var _model = require("../model/model");
 
 var _schema = require("../helpers/schema");
 
 var _helperFunc = _interopRequireDefault(require("../helpers/helperFunc"));
-
-var _bcrypt = _interopRequireDefault(require("bcrypt"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -51,8 +49,9 @@ function () {
           if (!result) return res.send('password doesnt match');
           (0, _jsonwebtoken.sign)({
             email: foundUser.email,
-            password: foundUser.password
-          }, _config["default"].SECRETKEY, function (err, data) {
+            password: foundUser.password,
+            admin: foundUser.admin
+          }, process.env.SECRETKEY, function (err, data) {
             foundUser.token = data;
             res.status(200).send(foundUser);
           });
@@ -90,7 +89,7 @@ function () {
             email: Newuser.email,
             password: Newuser.password,
             admin: Newuser.admin
-          }, _config["default"].SECRETKEY, function (err, data) {
+          }, process.env.SECRETKEY, function (err, data) {
             Newuser.token = data;
             res.status(200).send((0, _helperFunc["default"])(Newuser));
           });

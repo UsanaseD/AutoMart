@@ -8,9 +8,6 @@ var _server = _interopRequireDefault(require("../server"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-// test frame work
-// toenable chai to make a request using http
-// to call server
 (0, _chai.should)();
 (0, _chai.use)(_chaiHttp["default"]);
 describe('car endpoint testing', function () {
@@ -34,12 +31,12 @@ describe('car endpoint testing', function () {
     (0, _chai.request)(_server["default"]).post('/api/v1/car').set({
       Authorization: "Bearer ".concat(global.myToken)
     }).send({
-      email: "todiddy20@gmail.com",
-      manufacturer: "manufacturer",
-      model: "value.model",
+      email: 'todiddy20@gmail.com',
+      manufacturer: 'manufacturer',
+      model: 'value.model',
       price: 3000,
-      state: "new",
-      status: "old"
+      state: 'new',
+      status: 'old'
     }).end(function (err, response) {
       response.should.have.status(200);
       done();
@@ -169,7 +166,8 @@ describe('car endpoint testing', function () {
       done();
     });
   });
-});
+}); // test for enduser to delete a spesific car
+
 it('test for enduser to delete a spesific car', function (done) {
   (0, _chai.request)(_server["default"])["delete"]('/api/v1/car/1').set({
     Authorization: "Bearer ".concat(global.myToken)

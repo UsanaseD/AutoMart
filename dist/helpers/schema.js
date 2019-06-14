@@ -29,7 +29,6 @@ exports.carschema = carschema;
 
 var orderschema = _joi["default"].object().keys({
   car_id: _joi["default"].number().integer(),
-  status: _joi["default"].string(),
   old_price_offered: _joi["default"].number().integer(),
   new_price_offered: _joi["default"].number().integer()
 });
@@ -57,8 +56,8 @@ var signupschema = _joi["default"].object().keys({
   email: _joi["default"].string().email({
     minDomainSegments: 2
   }).required(),
-  firstname: _joi["default"].string(),
-  lastname: _joi["default"].string(),
+  firstname: _joi["default"].string().regex(/^[a-zA-Z]{3,30}$/),
+  lastname: _joi["default"].string().regex(/^[a-zA-Z]{3,30}$/),
   address: _joi["default"].string().alphanum().min(5).max(20).required(),
   admin: _joi["default"]["boolean"](),
   password: _joi["default"].string().regex(/^[a-zA-Z0-9]{3,30}$/).required()

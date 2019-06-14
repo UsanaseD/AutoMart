@@ -13,7 +13,6 @@ export const carschema = joi.object().keys({
 });
 export const orderschema = joi.object().keys({
   car_id: joi.number().integer(),
-  status: joi.string(),
   old_price_offered: joi.number().integer(),
   new_price_offered: joi.number().integer(),
 });
@@ -28,8 +27,8 @@ export const loginschema = joi.object().keys({
 });
 export const signupschema = joi.object().keys({
   email: joi.string().email({ minDomainSegments: 2 }).required(),
-  firstname: joi.string(),
-  lastname: joi.string(),
+  firstname: joi.string().regex(/^[a-zA-Z]{3,30}$/),
+  lastname: joi.string().regex(/^[a-zA-Z]{3,30}$/),
   address: joi.string().alphanum().min(5).max(20)
     .required(),
   admin: joi.boolean(),
@@ -41,4 +40,3 @@ export const priceschema = joi.object().keys({
 export const orderpatchschema = joi.object().keys({
   new_price_offered: joi.number(),
 });
-
