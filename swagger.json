@@ -30,18 +30,12 @@
           {
             "name": "user",
             "in": "body",
-            "description": "User creation",
-            "schema": {
-              "$ref":"#/definitions/signup"
-            }
+            "description": "User creation"
           }
         ],
         "responses": {
           "200": {
-            "description": "User account created!",
-            "schema": {
-              "$ref": "#/definitions/signup"
-            }
+            "description": "User account created!"
           }
         }
       }
@@ -89,10 +83,7 @@
           {
             "name": "register a car",
             "in": "body",
-            "description": "enter cars information",
-            "schema": {
-              "$ref": "#/definitions/car"
-            }
+            "description": "enter cars information"
           }
         ],
         "responses": {
@@ -117,10 +108,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
-            "schema": {
-              "$ref": "#/definitions/car"
-            }
+            "description": "Success"
           }
         }
       }
@@ -142,10 +130,7 @@
           {
             "name": "order",
             "in": "body",
-            "description": "order creation",
-            "schema": {
-              "$ref": "#/definitions/order"
-            }
+            "description": "order creation"
           }
         ],
         "responses": {
@@ -170,10 +155,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
-            "schema": {
-              "$ref": "#/definitions/order"
-            }
+            "description": "Success"
           }
         }
       }
@@ -196,10 +178,7 @@
           {
             "name": "Flag",
             "in": "body",
-            "description": "report or flag a posted ad",
-            "schema": {
-              "$ref": "#/definitions/flag"
-            }
+            "description": "report or flag a posted ad"
           }
         ],
         "responses": {
@@ -239,10 +218,7 @@
           "name": "price",
           "in": "body",
           "required": true,
-          "description": "Car price",
-          "schema": {
-            "$ref": "#/definitions/car"
-          }
+          "description": "Car price"
         }
       ],
       "responses": {
@@ -356,10 +332,7 @@
             "name": "price",
             "in": "body",
             "required": true,
-            "description": "car identifier",
-            "schema": {
-              "$ref": "#/definitions/car"
-            }
+            "description": "car identifier"
           }
         ],
         "responses": {
@@ -509,10 +482,7 @@
             "name": "status",
             "in": "body",
             "required": true,
-            "description": "Car status (available or sold",
-            "schema": {
-              "$ref": "#/definitions/status"
-            }
+            "description": "Car status (available or sold"
           }
         ],
         "responses": {
