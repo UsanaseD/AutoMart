@@ -308,7 +308,7 @@
           "tags":[
               "order"
           ],
-          "summary":"update order's status",
+          "summary":"update order's new price",
           "produces":[
               "application/json"
           ],
@@ -332,12 +332,12 @@
             "name": "price",
             "in": "body",
             "required": true,
-            "description": "car identifier"
+            "description": "new_price_offered"
           }
         ],
         "responses": {
           "200": {
-            "description": "car retreived!"
+            "description": "price updated!"
           }
         }
       }
