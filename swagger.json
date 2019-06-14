@@ -5,7 +5,7 @@
     "version": "1",
     "title": "AutoMart"
   },
-  "host": "localhost:8000",
+  "host": "usanase-automart.herokuapp.com",
   "basePath": "/api/v1/",
   "securityDefinitions": {
     "Bearer": {
