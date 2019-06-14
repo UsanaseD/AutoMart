@@ -1,6 +1,5 @@
 import jsonwebtoken from 'jsonwebtoken';
 import secretkey from '../config/config';
-
 export default (req, res, next) => {
   const token = req.headers.authorization.split(' ')[1];
   jsonwebtoken.verify(token, secretkey.SECRETKEY, (err, data) => {
