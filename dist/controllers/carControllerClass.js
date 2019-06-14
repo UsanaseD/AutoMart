@@ -147,7 +147,7 @@ function () {
         if (err) return res.send(err.details[0].message);
 
         var order = _model.orders.find(function (order) {
-          return order.id == parseInt(req.params.id, 10) && order.status == 'pending';
+          return order.id == parseInt(req.params.id, 10) && order.status === 'pending';
         });
 
         if (!order) return res.send('the stated id doesnt exist or the status is not pending');
@@ -187,7 +187,7 @@ function () {
           id: _model.orders.length + 1,
           car_id: value.car_id,
           createdOn: new Date(),
-          status: value.status,
+          status: 'pending',
           old_price_offered: value.old_price_offered,
           new_price_offered: value.new_price_offered
         };

@@ -10,7 +10,6 @@ class carController {
 // function to select all cars
   getAllCars(req, res) {
     res.status(200).send(cars);
-
   }
 
   // function to select all orders
@@ -20,7 +19,6 @@ class carController {
 
   // function to select cars by state & status
   getCarStatusState(req, res) {
-
     const car = cars.filter(car => car.status == req.query.status && (car.state == req.query.state));
     res.status(200).send(car);
   }
@@ -34,11 +32,9 @@ class carController {
     const range = [];
 
     cars.forEach((car) => {
-
       if (car.status == status && ((minPrice <= car.price) && (car.price <= maxPrice))) {
         range.push(car);
       }
-
     });
 
     res.status(200).send(range);
@@ -98,7 +94,7 @@ class carController {
   orderPatchStatus(req, res) {
     joi.validate(req.body, orderpatchschema, (err, value) => {
       if (err) return res.send(err.details[0].message);
-      const order = orders.find(order => order.id == parseInt(req.params.id, 10) && order.status == 'pending');
+      const order = orders.find(order => order.id == parseInt(req.params.id, 10) && order.status === 'pending');
       if (!order) return res.send('the stated id doesnt exist or the status is not pending');
       order.new_price_offered = value.new_price_offered;
       return res.send(order);
@@ -132,7 +128,7 @@ class carController {
         id: orders.length + 1,
         car_id: value.car_id,
         createdOn: new Date(),
-        status: value.status,
+        status: 'pending',
         old_price_offered: value.old_price_offered,
         new_price_offered: value.new_price_offered,
       };

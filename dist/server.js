@@ -9,17 +9,18 @@ var _express = _interopRequireDefault(require("express"));
 
 var _bodyParser = _interopRequireDefault(require("body-parser"));
 
-var _routes = _interopRequireDefault(require("./routes/routes"));
+var _dotenv = require("dotenv");
 
-var _config = _interopRequireDefault(require("./config/config"));
+var _routes = _interopRequireDefault(require("./routes/routes"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+(0, _dotenv.config)();
 var app = (0, _express["default"])();
 app.use(_bodyParser["default"].json()); // reads json data and sends them to (app)
 
 (0, _routes["default"])(app);
-var port = process.env.PORT || _config["default"].PORT;
+var port = process.env.PORT;
 app.listen(port, function () {
   return console.log("listening on port ".concat(port, "..."));
 });

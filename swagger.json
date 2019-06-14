@@ -1,597 +1,622 @@
 {
-    "swagger": "2.0",
-    "info": {
-      "description": "Auto Mart is an online marketplace for automobiles of diverse makes, model or body type.  Auto Mart, users can sell their cars or buy from trusted dealerships or private sellers. ",
-      "version": "1",
-      "title": "AutoMart"
-    },
-    "host": "usanase-automart.herokuapp.com",
-    "basePath": "/api/v1/",
-    "securityDefinitions": {
-      "Bearer": {
-        "type": "apiKey",
-        "name": "Authorization",
-        "in": "header"
+  "swagger": "2.0",
+  "info": {
+    "description": "Auto Mart is an online marketplace for automobiles of diverse makes, model or body type.  Auto Mart, users can sell their cars or buy from trusted dealerships or private sellers. ",
+    "version": "1",
+    "title": "AutoMart"
+  },
+  "host": "localhost:8000",
+  "basePath": "/api/v1/",
+  "securityDefinitions": {
+    "Bearer": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "paths": {
+    "/auth/signup": {
+      "post": {
+        "tags": [
+          "Authentication"
+        ],
+        "summary": "User SignUp",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "User creation",
+            "schema": {
+              "$ref":"#/definitions/signup"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User account created!",
+            "schema": {
+              "$ref": "#/definitions/signup"
+            }
+          }
+        }
       }
     },
-    
-    "schemes": [
-      "https",
-      "http"
-    ],
-    "paths": {
-      "/auth/signup": {
-        "post": {
-          "tags": [
-            "Authentication"
-          ],
-          "summary": "User SignUp",
-          "parameters": [
-            {
-              "name": "user",
-              "in": "body",
-              "description": "User creation",
-              "schema": {
-                "$ref":"#/definitions/signup"
-              }
+    "/auth/login": {
+      "post": {
+        "tags": [
+          "Authentication"
+        ],
+        "summary": "User Login",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "You can login",
+            "schema": {
+              "$ref": "#/definitions/login"
             }
-          ],
-          "responses": {
-            "200": {
-              "description": "User account created!",
-              "schema": {
-                "$ref": "#/definitions/signup"
-              }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Login successful!"
+          }
+        }
+      }
+    },
+    "/car": {
+      "post": {
+        "tags": [
+          "Car"
+        ],
+        "summary": "Car Post Creation",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Admin token",
+            "required": true
+          },
+          {
+            "name": "register a car",
+            "in": "body",
+            "description": "enter cars information",
+            "schema": {
+              "$ref": "#/definitions/car"
             }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Car Registerd!"
           }
         }
       },
-      "/auth/login": {
-        "post": {
-          "tags": [
-            "Authentication"
-          ],
-          "summary": "User Login",
-          "parameters": [
-            {
-              "name": "user",
-              "in": "body",
-              "description": "You can login",
-              "schema": {
-                "$ref": "#/definitions/login"
-              }
-            }
-          ],
-          "responses": {
-            "201": {
-              "description": "Login successful!"
+       "get": {
+        "tags": [
+          "Car"
+        ],
+        "summary": "Get all cars",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Admin token",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/car"
             }
           }
         }
+      }
+    },
+    "/order": {
+      "post": {
+        "tags": [
+          "Order"
+        ],
+        "summary": "Press an order.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Client token",
+            "required": true
+          },
+          {
+            "name": "order",
+            "in": "body",
+            "description": "order creation",
+            "schema": {
+              "$ref": "#/definitions/order"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "order created successfully!"
+          }
+        }
       },
-      "/car": {
-        "post": {
-          "tags": [
-            "Car"
-          ],
-          "summary": "Car Post Creation",
-          "produces": [
+      "get": {
+        "tags": [
+          "order"
+        ],
+        "summary": "Get all orders",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Admin token",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/order"
+            }
+          }
+        }
+      }
+    },
+
+    "/flag": {
+      "post": {
+        "tags": [
+          "flag"
+        ],
+        "summary": "flag a post.",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Client token",
+            "required": true
+          },
+          {
+            "name": "Flag",
+            "in": "body",
+            "description": "report or flag a posted ad",
+            "schema": {
+              "$ref": "#/definitions/flag"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "post flaged successfully!"
+          }
+        }
+      }
+    },
+
+    "/car/price/{id}": {
+      "patch":{
+        "tags":[
+            "car"
+        ],
+        "summary":"update car price",
+        "produces":[
             "application/json"
-          ],
-          "parameters": [
-            {
-              "name": "Authorization",
-              "in": "header",
-              "type": "string",
-              "description": "Admin token",
-              "required": true
-            },
-            {
-              "name": "register a car",
-              "in": "body",
-              "description": "enter cars information",
-              "schema": {
-                "$ref": "#/definitions/car"
-              }
-            }
-          ],
-          "responses": {
-            "201": {
-              "description": "Car Registerd!"
-            }
-          }
+        ],
+
+            "parameters": [
+        {
+          "name": "Authorization",
+          "in": "header",
+          "type": "string",
+          "description": "Admin token",
+          "required": true
         },
-         "get": {
-          "tags": [
-            "Car"
-          ],
-          "summary": "Get all cars",
-          "parameters": [
-            {
-              "name": "Authorization",
-              "in": "header",
-              "type": "string",
-              "description": "Admin token",
-              "required": true
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "Success",
-              "schema": {
-                "$ref": "#/definitions/car"
-              }
-            }
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "integer",
+          "description": "car id"
+        },
+        {
+          "name": "price",
+          "in": "body",
+          "required": true,
+          "description": "Car price",
+          "schema": {
+            "$ref": "#/definitions/car"
           }
         }
-      },
-      "/order": {
-        "post": {
-          "tags": [
-            "Order"
-          ],
-          "summary": "Press an order.",
-          "parameters": [
-            {
-              "name": "Authorization",
-              "in": "header",
-              "type": "string",
-              "description": "Client token",
-              "required": true
-            },
-            {
-              "name": "order",
-              "in": "body",
-              "description": "order creation",
-              "schema": {
-                "$ref": "#/definitions/order"
-              }
-            }
-          ],
-          "responses": {
-            "201": {
-              "description": "order created successfully!"
-            }
-          }
+      ],
+      "responses": {
+        "200": {
+          "description": "price updated!"
+        },
+        "404": {
+          "description": "No element found!"
         }
-      },
-
-      "/flag": {
-        "post": {
-          "tags": [
-            "flag"
-          ],
-          "summary": "flag a post.",
-          "parameters": [
-            {
-              "name": "Authorization",
-              "in": "header",
-              "type": "string",
-              "description": "Client token",
-              "required": true
-            },
-            {
-              "name": "Flag",
-              "in": "body",
-              "description": "report or flag a posted ad",
-              "schema": {
-                "$ref": "#/definitions/flag"
-              }
-            }
-          ],
-          "responses": {
-            "201": {
-              "description": "post flaged successfully!"
-            }
-          }
-        }
-      },
-
-      "/order'": {
-        "get": {
-          "tags": [
-            "order"
-          ],
-          "summary": "Get all orders",
-          "parameters": [
-            {
-              "name": "Authorization",
-              "in": "header",
-              "type": "string",
-              "description": "Admin token",
-              "required": true
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "Success",
-              "schema": {
-                "$ref": "#/definitions/order"
-              }
-            }
-          }
-        }
-      },
-
-      "/car/state/status": {
-        "get": {
-          "tags": [
-            "Car"
-          ],
-          "summary": "Get a specific cars by status & state",
-          "parameters": [
-            {
-              "name": "Authorization",
-              "in": "header",
-              "type": "string",
-              "description": "Admin token",
-              "required": true
-            },
-            {
-              "name": "status",
-              "in": "query",
-              "description": "car status",
-              "required": true,
-              "type": "string"
-            },
-            {
-                "name": "state",
-                "in": "query",
-                "description": "car state",
-                "required": true,
-                "type": "string"
-              }
-          ],
-          "responses": {
-            "200": {
-              "description": "Specific cars displayed"
-            }
-          }
-        }
-      },
-
-      "/car/status": {
-        "get": {
-          "tags": [
-            "Car"
-          ],
-          "summary": "Get  specific cars by status",
-          "parameters": [
-            {
-              "name": "Authorization",
-              "in": "header",
-              "type": "string",
-              "description": "Admin token",
-              "required": true
-            },
-            {
-              "name": "status",
-              "in": "query",
-              "description": "car status",
-              "required": true,
-              "type": "string"
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "Specific cars"
-            }
-          }
-        }
-      },
-
+      }
+    }
+  },
       
-      "/order/{id}":{
 
-        "patch":{
-            "tags":[
-                "order"
-            ],
-            "summary":"update order's status",
-            "produces":[
-                "application/json"
-            ],
-
-                "parameters": [
-            {
-              "name": "Authorization",
-              "in": "header",
-              "type": "string",
-              "description": "Admin token",
-              "required": true
-            },
-            {
-              "name": "id",
+    "/car/state/status": {
+      "get": {
+        "tags": [
+          "Car"
+        ],
+        "summary": "Get a specific cars by status & state",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Admin token",
+            "required": true
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "description": "car status",
+            "required": true,
+            "type": "string"
+          },
+          {
+              "name": "state",
               "in": "query",
+              "description": "car state",
               "required": true,
-              "type": "integer",
-              "description": "car id"
-            },
-            {
-              "name": "Id",
-              "in": "body",
-              "required": true,
-              "description": "car identifier",
-              "schema": {
-                "$ref": "#/definitions/car"
-              }
+              "type": "string"
             }
-          ],
-          "responses": {
-            "200": {
-              "description": "car retreived!"
-            }
+        ],
+        "responses": {
+          "200": {
+            "description": "Specific cars displayed"
           }
         }
-      },
+      }
+    },
+  
 
-      "/car/range": {
-        "get": {
-          "tags": [
-            "Car"
+    "/car/status": {
+      "get": {
+        "tags": [
+          "Car"
+        ],
+        "summary": "Get  specific cars by status",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Admin token",
+            "required": true
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "description": "car status",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Specific cars"
+          }
+        }
+      }
+    },
+
+    
+    "/order/{id}":{
+
+      "patch":{
+          "tags":[
+              "order"
           ],
-          "summary": "Get Specific cars with same status and price_range ",
-          "parameters": [
-            {
-              "name": "Authorization",
-              "in": "header",
-              "type": "string",
-              "description": "Admin token",
-              "required": true
-            },
-            {
-              "name": "min_price",
+          "summary":"update order's status",
+          "produces":[
+              "application/json"
+          ],
+
+              "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Admin token",
+            "required": true
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "description": "car id"
+          },
+          {
+            "name": "price",
+            "in": "body",
+            "required": true,
+            "description": "car identifier",
+            "schema": {
+              "$ref": "#/definitions/car"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "car retreived!"
+          }
+        }
+      }
+    },
+
+    "/car/range": {
+      "get": {
+        "tags": [
+          "Car"
+        ],
+        "summary": "Get Specific cars with same status and price_range ",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Admin token",
+            "required": true
+          },
+          {
+            "name": "min_price",
+            "in": "query",
+            "description": "mini price",
+            "required": true,
+            "type": "integer"
+          },
+          {
+              "name": "max_price",
               "in": "query",
-              "description": "mini price",
+              "description": "Max Price",
               "required": true,
               "type": "integer"
             },
-            {
-                "name": "max_price",
-                "in": "query",
-                "description": "Max Price",
-                "required": true,
-                "type": "integer"
-              },
 
-              {
-                "name": "status",
-                "in": "query",
-                "description": "car status",
-                "required": true,
-                "type": "string"
-              }
-          ],
-          "responses": {
-            "200": {
-              "description": "retreived successfully"
-            }
-          }
-        }
-      },
-
-      "/car/{id}":{
-
-        "Delete":{
-            "tags":[
-                "car"
-            ],
-            "summary":"delete car",
-            "produces":[
-                "application/json"
-            ],
-
-                "parameters": [
-            {
-              "name": "Authorization",
-              "in": "header",
-              "type": "string",
-              "description": "Admin token",
-              "required": true
-            },
-            {
-              "name": "id",
-              "in": "query",
-              "required": true,
-              "type": "integer",
-              "description": "car id"
-            },
-            {
-              "name": "Id",
-              "in": "body",
-              "required": true,
-              "description": "car identifier",
-              "schema": {
-                "$ref": "#/definitions/car{id}"
-              }
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "car deleted!"
-            }
-          }
-        }
-      },
-
-
-      "/car/{id}":{
-
-        "Get":{
-            "tags":[
-                "order"
-            ],
-            "summary":"update order's status",
-            "produces":[
-                "application/json"
-            ],
-
-                "parameters": [
-            {
-              "name": "Authorization",
-              "in": "header",
-              "type": "string",
-              "description": "Admin token",
-              "required": true
-            },
-            {
-              "name": "id",
-              "in": "path",
-              "required": true,
-              "type": "integer",
-              "description": "car id"
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "Status has been updated!"
-            }
-          }
-        }
-      },
-
-
-    "/car/status/{id}":{
-
-        "patch":{
-            "tags":[
-                "car"
-            ],
-            "summary":"update car's status",
-            "produces":[
-                "application/json"
-            ],
-
-                "parameters": [
-            {
-              "name": "Authorization",
-              "in": "header",
-              "type": "string",
-              "description": "Admin token",
-              "required": true
-            },
-            {
-              "name": "id",
-              "in": "path",
-              "required": true,
-              "type": "integer",
-              "description": "car Id"
-            },
             {
               "name": "status",
-              "in": "body",
+              "in": "query",
+              "description": "car status",
               "required": true,
-              "description": "Car status (available or sold",
-              "schema": {
-                "$ref": "#/definitions/car/status"
-              }
+              "type": "string"
             }
-          ],
-          "responses": {
-            "200": {
-              "description": "Status has been updated!"
-            }
+        ],
+        "responses": {
+          "200": {
+            "description": "retreived successfully"
           }
-        }
-      },
-
-    "definitions": {
-      "signup": {
-        "type": "object",
-        "properties": {
-          "email": {
-            "type": "string"
-          },
-          "firstname": {
-            "type": "string"
-          },
-          "lastname": {
-            "type": "string"
-          },
-          "password": {
-            "type": "string"
-          },
-          "address":{
-            "type":"string"
-          },
-          "admin":{
-            "type":"boolean"
-          }
-        }
-      },
-
-      "login": {
-        "type": "object",
-        "properties": {
-          "email": {
-            "type": "string"
-          },
-          "password": {
-            "type": "string"
-          }
-        }
-      },
-
-      "car":{
-        "type":"object",
-        "properties":{
-            "email":{
-                "type":"string"
-            },
-            "manufacturer":{
-                "type":"string"
-            },
-            "model":{
-                "type":"string"
-            },
-            "price":{
-                "type":"integer"
-            },
-            "state":{
-                "type":"string"
-            },
-            "status":{
-                "type":"string"
-            }
-        }
-    },
-
-    "order":{
-        "type":"object",
-        "properties":{
-            "car_id":{
-                "type":"integer"
-            },
-            "status":{
-                "type":"string"
-            },
-            "old_price":{
-                "type":"integer"
-            },
-        "new_price":{
-            "type":"integer"
-        } 
-        }
-    },
-      "flag": {
-        "type": "object",
-        "properties": {
-          "car_id": {
-            "type": "integer"
-          },
-          "reason": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          }
-
         }
       }
-  }
+    },
+
+    "/car/{id}":{
+      "get":{
+        "tags":[
+            "car"
+        ],
+        "summary":"get specific car",
+        "produces":[
+            "application/json"
+        ],
+
+            "parameters": [
+        {
+          "name": "Authorization",
+          "in": "header",
+          "type": "string",
+          "description": "Admin token",
+          "required": true
+        },
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "integer",
+          "description": "car id"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Success!"
+        }
+      }
+    },
+    "delete":{
+          "tags":[
+              "car"
+          ],
+          "summary":"delete car",
+          "produces":[
+              "application/json"
+          ],
+
+              "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Admin token",
+            "required": true
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "description": "car id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "car deleted!"
+          }
+        }
+      }
+    },
+  "/car/status/{id}":{
+
+      "patch":{
+          "tags":[
+              "car"
+          ],
+          "summary":"update car's status",
+          "produces":[
+              "application/json"
+          ],
+
+              "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Admin token",
+            "required": true
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "description": "car Id"
+          },
+          {
+            "name": "status",
+            "in": "body",
+            "required": true,
+            "description": "Car status (available or sold",
+            "schema": {
+              "$ref": "#/definitions/status"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Status has been updated!"
+          }
+        }
+      }
+    },
+
+  "definitions": {
+    "signup": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "firstname": {
+          "type": "string"
+        },
+        "lastname": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "address":{
+          "type":"string"
+        },
+        "admin":{
+          "type":"boolean"
+        }
+      }
+    },
+
+    "login": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    },
+
+    "car":{
+      "type":"object",
+      "properties":{
+          "email":{
+              "type":"string"
+          },
+          "manufacturer":{
+              "type":"string"
+          },
+          "model":{
+              "type":"string"
+          },
+          "price":{
+              "type":"integer"
+          },
+          "state":{
+              "type":"string"
+          },
+          "status":{
+              "type":"string"
+          }
+      }
+  },
+
+  "order":{
+      "type":"object",
+      "properties":{
+          "car_id":{
+              "type":"integer"
+          },
+          "status":{
+              "type":"string"
+          },
+          "old_price":{
+              "type":"integer"
+          },
+      "new_price":{
+          "type":"integer"
+      } 
+      }
+  },
+    "flag": {
+      "type": "object",
+      "properties": {
+        "car_id": {
+          "type": "integer"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+
+      }
+    }
+}
 }
 
 }
-
-      
-    

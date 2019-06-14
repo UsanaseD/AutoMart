@@ -18,7 +18,7 @@ it('testing of signup', function (done) {
     email: 'todiddy30@gmail.com',
     password: 'usanase10',
     admin: true,
-    address: "kk199st"
+    address: 'kk199st'
   }).end(function (err, data) {
     data.should.have.status(200);
     done();

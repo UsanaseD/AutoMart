@@ -12,8 +12,8 @@ var _default = function _default(NewUser) {
     lastname: NewUser.lastname,
     email: NewUser.email,
     address: NewUser.address,
-    token: NewUser.token,
-    admin: NewUser.admin
+    admin: NewUser.admin,
+    token: NewUser.token
   };
   return user;
 };
