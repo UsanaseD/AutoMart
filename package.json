@@ -42,7 +42,7 @@
     "@babel/node": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "@babel/register": "^7.4.4",
-    "@hapi/joi": "^15.0.3",
+    "@hapi/joi": "^15.1.1",
     "allow-methods": "^2.0.0",
     "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
